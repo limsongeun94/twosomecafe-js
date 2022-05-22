@@ -1,0 +1,372 @@
+*{
+    margin : 0;
+    padding : 0;
+    color : #645959;
+}
+
+body {
+    min-width: 1440px;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul li{
+    list-style-type: none;
+    display: inline-block;
+}
+
+button{
+    cursor:pointer;
+}
+
+/* GNB 부분 */
+header{
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #fff;
+    /* position: sticky; */
+    position: fixed;
+    left:0; top:0px;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(64, 59, 59, 0.3);
+}
+
+.header_inner{
+    width: 1400px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header_logo{
+    height: 120px;
+    display: flex;
+    align-items: center;
+}
+
+.header_actions{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-height: 120px;
+    width: 900px;
+}
+
+.header_actions_top{
+    margin-top: 27px;
+    display: flex;
+    justify-content: flex-end;
+}
+.header_actions_top > *{
+    margin-left: 16px;
+}
+
+.header_actions_bottom{
+    margin-top: 16px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    bottom: 0;
+    padding-bottom: 32px;
+    color: #645959;
+}
+
+.header_actions_bottom > .main_menu{
+    position: relative;
+}
+
+.main_menu_label{
+    position: relative;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.main_menu_label::before{
+    position:absolute;
+    width:100%;
+    height: 5px;
+    top: 100%;
+    left: 0;
+    content: "";
+    border-bottom: 5px solid transparent;
+    transition: border-bottom-color;
+    transition-duration: 0.5s;
+}
+
+.main_menu:hover .main_menu_label::before{
+    border-bottom-color: #645959;
+}
+
+.header_actions_bottom:hover .sub_menu{
+    height: 200px;
+}
+
+.sub_menu{
+    overflow: hidden;
+    height: 0;
+    transition-duration: 0.2s;
+    transition-property: height;
+}
+
+.sub_menu_item:first-child{
+    margin-top: 32px;
+}
+.sub_menu_item{
+    margin-top: 8px;
+    cursor: pointer;
+}
+.sub_menu_item:hover{
+    font-weight: bold;
+}
+
+.hamberger_menu {
+    display: none;
+}
+
+.for_height{
+    height: 120px;
+}
+/* GNB 부분 */
+
+
+.sub_visual{
+    background: url("../../img/fixed/suv_visual/coffee-maker-machine-making-espresso-shot.jpg") no-repeat bottom;
+    background-size: 1920px auto;
+}
+
+.sub_visual :is(h1, p, ul){
+    text-align: center;
+    color: #ececee;
+}
+
+.sub_visual h1{
+    padding: 100px 0 30px 0;
+}
+
+.sub_visual ul{
+    padding: 30px 0 100px 0;
+}
+
+.sub_visual ul li a{
+    border: 1px solid #ececee;
+    width : 180px;
+    line-height: 38px;
+    text-align: center;
+    text-decoration: none;
+    color: #ececee;
+    background-color: rgba(64, 59, 59, 0.6);
+    display: block;
+}
+
+.sub_visual ul li a:hover{
+    color: #645959;
+    background-color: #ececee;
+}
+
+.sub_visual ul li:nth-child(2) a{
+    color: #645959;
+    background-color: #ececee;
+}
+
+.agree, .person, .location, .button_wrap{
+    margin: 0 auto;
+    margin-top: 100px;
+    width: 1400px;
+}
+
+.box{
+    margin-top: 30px;
+    border : 1px solid #645959;
+    padding : 30px;
+    width: 100%;
+    overflow: auto;
+    box-sizing: border-box;
+}
+
+.wrap{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+table{
+    margin-top: 30px;
+    border-collapse: collapse;
+    border-top: 1px solid #645959;
+    width: 100%;
+}
+
+span{
+    color: #c80029;
+}
+
+th{
+    text-align: left;
+}
+
+th, td{
+    border-bottom: 1px solid #ececee;
+    padding : 20px;
+}
+
+#name, #emailid, #emailaddr, #tel_no_a_1, #tel_no_a_2, #tel_no_b, #call_time, #zip, #adress_main, #adress_ect, #shop_name, #hope_location{
+    border: 1px solid #645959;
+    padding : 0 20px;
+    width: 300px;
+    height: 50px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+#emailid, #emailaddr, #tel_no_a_1, #tel_no_a_2, #zip{
+    width: 200px;
+}
+
+#adress_main, #adress_ect{
+    width: 400px;
+}
+
+#pyeong{
+    border:none;
+    width: 210px;
+    height: 50px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.pyeong_text{
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    margin-top: -11px;
+    color: #645959;
+}
+
+.custom_input {
+    padding: 0 20px;
+    width: 300px;
+    height: 50px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.custom_input::before {
+    position:absolute;
+    width:calc(100% - 2px);
+    height:calc(100% - 2px);
+    left:0;
+    top:0;
+    content: "";
+    border: 1px solid #645959;
+    border-style: inset;
+    pointer-events: none;
+}
+
+.custom_input.focus::before {
+    width:calc(100% - 4px);
+    height:calc(100% - 4px);
+    border: 2px solid black;
+    border-radius: 4px;
+}
+
+.custom_input > input {
+    outline: none;
+    background-color: transparent;
+}
+
+.color_button{
+    margin-left: 10px;
+    border: none;
+    padding :0 20px;
+    height: 50px;
+    font-weight: bold;
+    color: #ececee;
+    background-color: #645959;
+    box-sizing: border-box;
+}
+
+.button_wrap{
+    margin-bottom: 100px;
+    text-align: center;
+}
+
+.button_wrap button{
+    border: none;
+    border-radius: 0;
+    width: 200px;
+    height: 50px;
+    font-weight: bold;
+}
+
+.button_wrap button[type=reset]{
+    background-color: #ececee;
+}
+
+.okay{
+    color: #ececee;
+    background-color: #645959;
+}
+
+button{
+    font-size: 16px;
+}
+
+input::placeholder {
+    color: #cecece;
+}
+
+select {
+    appearance: none;
+    background: url('../../img/franchise/211614_down_b_arrow_icon.png') no-repeat calc(100% - 15px) center;
+    background-image: url('../../img/franchise/211614_down_b_arrow_icon.png');
+    background-size: 20px;
+}
+
+/*  */
+/*  */
+/*  */
+
+footer{
+    padding : 3% 13.541%;
+    height: 360px;
+    box-sizing: border-box;
+    background-color: #645959;
+}
+
+footer ul{
+    text-align: center;
+}
+
+footer ul li{
+    margin : 20px;
+}
+
+footer ul li a{
+    color: #ececee;
+    font-weight: bold;
+}
+
+footer hr{
+    margin: 0 auto;
+}
+
+footer p{
+    margin : 20px 0;
+    font-size: 12px;
+    color: #ececee;
+}
+
+footer div:last-child a{
+    margin : 20px 10px;
+    display: inline-block;
+}
+
+footer div:last-child a img{
+    border : 2px solid #ececee;
+    border-radius: 50%;
+    padding : 5px;
+}

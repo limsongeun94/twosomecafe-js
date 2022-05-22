@@ -1,0 +1,351 @@
+*{
+    margin : 0;
+    padding : 0;
+    color : #645959;
+}
+
+body {
+    min-width: 1440px;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul li{
+    list-style-type: none;
+    display: inline-block;
+}
+
+.section_title{
+    padding : 100px 0 30px;
+    font-family: 'Black Han Sans', sans-serif;
+    font-weight: normal;
+    text-align: center;
+}
+
+/* GNB 부분 */
+header{
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #fff;
+    position: fixed;
+    left:0; top:0px;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(64, 59, 59, 0.3);
+}
+
+.header_inner{
+    width: 1400px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header_logo{
+    height: 120px;
+    display: flex;
+    align-items: center;
+}
+
+.header_actions{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-height: 120px;
+    width: 900px;
+}
+
+.header_actions_top{
+    margin-top: 27px;
+    display: flex;
+    justify-content: flex-end;
+}
+.header_actions_top > *{
+    margin-left: 16px;
+}
+
+.header_actions_bottom{
+    margin-top: 16px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    bottom: 0;
+    padding-bottom: 32px;
+    color: #645959;
+}
+
+.header_actions_bottom > .main_menu{
+    position: relative;
+}
+
+.main_menu_label{
+    position: relative;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.main_menu_label::before{
+    position:absolute;
+    width:100%;
+    height: 5px;
+    top: 100%;
+    left: 0;
+    content: "";
+    border-bottom: 5px solid transparent;
+    transition: border-bottom-color;
+    transition-duration: 0.5s;
+}
+
+.main_menu:hover .main_menu_label::before{
+    border-bottom-color: #645959;
+}
+
+.header_actions_bottom:hover .sub_menu{
+    height: 200px;
+}
+
+.sub_menu{
+    overflow: hidden;
+    height: 0;
+    transition-duration: 0.2s;
+    transition-property: height;
+}
+
+.sub_menu_item:first-child{
+    margin-top: 32px;
+}
+.sub_menu_item{
+    margin-top: 8px;
+    cursor: pointer;
+}
+.sub_menu_item:hover{
+    font-weight: bold;
+}
+
+.hamberger_menu {
+    display: none;
+}
+
+.for_height{
+    height: 120px;
+}
+/* GNB 부분 */
+
+.sub_visual{
+    background: url("../../img/fixed/suv_visual/coffee-maker-machine-making-espresso-shot.jpg") no-repeat bottom;
+    background-size: 1920px auto;
+}
+
+.sub_visual :is(h1, p, ul){
+    text-align: center;
+    color: #ececee;
+}
+
+.sub_visual h1{
+    padding: 100px 0 30px 0;
+}
+
+.sub_visual ul{
+    padding: 30px 0 100px 0;
+}
+
+.sub_visual ul li a{
+    border: 1px solid #ececee;
+    width : 180px;
+    line-height: 38px;
+    text-align: center;
+    text-decoration: none;
+    color: #ececee;
+    background-color: rgba(64, 59, 59, 0.6);
+    display: block;
+}
+
+.sub_visual ul li a:hover{
+    color: #645959;
+    background-color: #ececee;
+}
+
+.sub_visual ul li:last-child a{
+    color: #645959;
+    background-color: #ececee;
+}
+
+.twosome_heart{
+    margin : 100px auto;
+    padding : 50px;
+    width: 1400px;
+    text-align: center;
+    background-color: #ececee;
+    box-sizing: border-box;
+}
+
+span{
+    color: #c80029;
+}
+
+.twosome_heart > div{
+    margin-top: 50px;
+    border-radius: 50px;
+    padding : 20px;
+    width: 625px;
+    font-weight: bold;
+    background-color: white;
+    display: inline-block;
+    box-sizing: border-box;
+}
+
+.twosome_heart > div:nth-of-type(n+3):nth-of-type(-n+4){
+    margin-top: 30px;
+}
+
+.twosome_heart > div:nth-of-type(2n){
+    margin-left: 50px;
+}
+
+.grade_table{
+    margin : 0 auto;
+    width: 1400px;
+}
+
+.grade_table table{
+    margin-top: 30px;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+caption{
+    width: 0;
+    height: 0;
+    font-size: 0;
+    line-height: 0;
+    text-indent: -9990em;
+}
+
+.grade_table table td{
+    padding : 50px;
+    text-align: center;
+}
+
+.grade_table table td{
+    border-right: 1px solid #ececee;
+    border-bottom: 1px solid #ececee;
+}
+
+.grade_table table td:nth-child(1){
+    border-left: 1px solid #ececee;
+}
+
+.grade_table table tr:nth-child(1) td{
+    border-top: 1px solid #ececee;
+}
+
+.grade_table table tr:nth-child(2) td p{
+    text-align: justify;
+}
+
+.wrap{
+    display: flex;
+    align-items: center;
+}
+
+.wrap p{
+    font-weight: bold;
+}
+
+.member, .cupon, .birthday{
+    margin-right: 30px;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+
+.member{
+    background: #ececee url("../../img/app_membership/ico_24_member.svg") no-repeat center;
+}
+
+.cupon{
+    background: #ececee url("../../img/app_membership/ico_24_coupon.svg") no-repeat center;
+}
+
+.p_wrap{
+    margin-left: 80px;
+}
+
+.p_wrap p{
+    padding-left: 10px;
+    position: relative;
+}
+
+.p_wrap p:before{
+    content: "-";
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.birthday{
+    background: #ececee url("../../img/app_membership/ico_24_birthday.svg") no-repeat center;
+}
+
+.guide{
+    margin: 100px auto;
+    width: 1400px;
+}
+
+.guide ul li{
+    padding-left: 16px;
+    padding-top: 8px;
+    position: relative;
+    display: block;
+}
+
+.guide ul li:before{
+    position: absolute;
+    content: "ㆍ";
+    left: 0;
+    top: 8px;
+}
+
+footer{
+    padding : 3% 13.541%;
+    height: 360px;
+    box-sizing: border-box;
+    background-color: #645959;
+}
+
+footer ul{
+    text-align: center;
+}
+
+footer ul li{
+    margin : 20px;
+}
+
+footer ul li a{
+    color: #ececee;
+    font-weight: bold;
+}
+
+footer hr{
+    margin: 0 auto;
+}
+
+footer p{
+    margin : 20px 0;
+    font-size: 12px;
+    color: #ececee;
+}
+
+footer div:last-child a{
+    margin : 20px 10px;
+    display: inline-block;
+}
+
+footer div:last-child a img{
+    border : 2px solid #ececee;
+    border-radius: 50%;
+    padding : 5px;
+}

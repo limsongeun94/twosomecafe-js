@@ -1,0 +1,397 @@
+*{
+    margin : 0;
+    padding : 0;
+    color: #645959;
+}
+
+body {
+    min-width: 1440px;
+}
+
+a{
+    text-decoration: none;
+}
+
+/* GNB 부분 */
+header{
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #fff;
+    /* position: sticky; */
+    position: fixed;
+    left:0; top:0px;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(64, 59, 59, 0.3);
+}
+
+.header_inner{
+    width: 1400px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header_logo{
+    height: 120px;
+    display: flex;
+    align-items: center;
+}
+
+.header_actions{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-height: 120px;
+    width: 900px;
+}
+
+.header_actions_top{
+    margin-top: 27px;
+    display: flex;
+    justify-content: flex-end;
+}
+.header_actions_top > *{
+    margin-left: 16px;
+}
+
+.header_actions_bottom{
+    margin-top: 16px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    bottom: 0;
+    padding-bottom: 32px;
+    color: #645959;
+}
+
+.header_actions_bottom > .main_menu{
+    position: relative;
+}
+
+.main_menu_label{
+    position: relative;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.main_menu_label::before{
+    position:absolute;
+    width:100%;
+    height: 5px;
+    top: 100%;
+    left: 0;
+    content: "";
+    border-bottom: 5px solid transparent;
+    transition: border-bottom-color;
+    transition-duration: 0.5s;
+}
+
+.main_menu:hover .main_menu_label::before{
+    border-bottom-color: #645959;
+}
+
+.header_actions_bottom:hover .sub_menu{
+    height: 200px;
+}
+
+.sub_menu{
+    overflow: hidden;
+    height: 0;
+    transition-duration: 0.2s;
+    transition-property: height;
+}
+
+.sub_menu_item:first-child{
+    margin-top: 32px;
+}
+.sub_menu_item{
+    margin-top: 8px;
+    cursor: pointer;
+}
+.sub_menu_item:hover{
+    font-weight: bold;
+}
+
+.hamberger_menu {
+    display: none;
+}
+
+.for_height{
+    height: 120px;
+}
+/* GNB 부분 */
+
+.contents{
+    margin : 100px auto;
+    width: 1400px;
+}
+
+:is(.contents p, .contents li){
+    margin-top: 8px;
+}
+
+ol li{
+    list-style-type: none;
+}
+
+.contents ul li{
+    display: block;
+}
+
+.num_circle_list{
+    list-style-position: inside;
+    list-style-type:decimal-leading-zero
+}
+
+.num_circle_list > li{
+    position: relative;
+    padding-left: 22px;
+}
+
+.num_circle_list > li:nth-child(1):before{
+    content: "01.";
+    position: absolute;
+    top : 0; left : 0;
+}
+
+.num_circle_list > li:nth-child(2):before{
+    content: "02.";
+    position: absolute;
+    top : 0; left : 0;
+}
+
+.num_circle_list > li:nth-child(3):before{
+    content: "03.";
+    position: absolute;
+    top : 0; left : 0;
+}
+
+.num_circle_list > li:nth-child(4):before{
+    content: "04.";
+    position: absolute;
+    top : 0; left : 0;
+}
+
+.num_circle_list > li:nth-child(5):before{
+    content: "05.";
+    position: absolute;
+    top : 0; left : 0;
+}
+
+.num_circle_list > li:nth-child(6):before{
+    content: "06.";
+    position: absolute;
+    top : 0; left : 0;
+}
+
+.num_circle_list > li:nth-child(7):before{
+    content: "07.";
+    position: absolute;
+    top : 0; left : 0;
+}
+
+.num_circle_list > li:nth-child(8):before{
+    content: "08.";
+    position: absolute;
+    top : 0; left : 0;
+}
+
+.num_circle_list > li:nth-child(9):before{
+    content: "09.";
+    position: absolute;
+    top : 0; left : 0;
+}
+
+.num_circle_list > li:nth-child(10):before{
+    content: "10.";
+    position: absolute;
+    top : 0; left : 0;
+}
+
+.num_circle_list > li:nth-child(11):before{
+    content: "11.";
+    position: absolute;
+    top : 0; left : 0;
+}
+
+.num_circle_list > li:nth-child(12):before{
+    content: "12.";
+    position: absolute;
+    top : 0; left : 0;
+}
+
+.num_circle_list > li:nth-child(13):before{
+    content: "13.";
+    position: absolute;
+    top : 0; left : 0;
+}
+
+.num_circle_list > li:nth-child(14):before{
+    content: "14.";
+    position: absolute;
+    top : 0; left : 0;
+}
+
+.num_circle_list > li:nth-child(15):before{
+    content: "15.";
+    position: absolute;
+    top : 0; left : 0;
+}
+
+.num_circle_list > li:nth-child(16):before{
+    content: "16.";
+    position: absolute;
+    top : 0; left : 0;
+}
+
+.num_list{
+    list-style-position: inside;
+    list-style-type: none;
+}
+
+.num_list > li{
+    position: relative;
+    padding-left: 20px;
+}
+
+.num_list > li:nth-child(1):before{
+    content: "①";
+    position: absolute;
+    top : 0; left : 0;
+}
+
+.num_list > li:nth-child(2):before{
+    content: "②";
+    position: absolute;
+    top : 0; left : 0;
+}
+
+.num_list > li:nth-child(2):before{
+    content: "②";
+    position: absolute;
+    top : 0; left : 0;
+}
+
+.num_list > li:nth-child(3):before{
+    content: "③";
+    position: absolute;
+    top : 0; left : 0;
+}
+
+.num_list > li:nth-child(4):before{
+    content: "④";
+    position: absolute;
+    top : 0; left : 0;
+}
+
+.num_list > li:nth-child(5):before{
+    content: "⑤";
+    position: absolute;
+    top : 0; left : 0;
+}
+
+.num_list > li:nth-child(6):before{
+    content: "⑥";
+    position: absolute;
+    top : 0; left : 0;
+}
+
+.num_list > li:nth-child(7):before{
+    content: "⑦";
+    position: absolute;
+    top : 0; left : 0;
+}
+
+.num_list > li:nth-child(8):before{
+    content: "⑧";
+    position: absolute;
+    top : 0; left : 0;
+}
+
+.num_list > li:nth-child(9):before{
+    content: "⑨";
+    position: absolute;
+    top : 0; left : 0;
+}
+
+caption{
+    width: 0;
+    height: 0;
+    font-size: 0;
+    line-height: 0;
+    text-indent: -9990em;
+}
+
+table{
+    margin : 0.5em auto;
+    border-top: 1px solid #645959;
+    border-bottom: 1px solid #645959;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+tbody > tr:nth-child(1) > td{
+    border-top: 1px solid #645959;
+}
+
+.line {
+    border-bottom : 1px solid #ececee;
+}
+
+tbody > tr > td:nth-child(2){
+    border-left: 1px solid #ececee;
+}
+
+th{
+    padding : 0.7em;
+    text-align: center;
+}
+
+td{
+    padding : 0.7em;
+}
+
+/* 푸터 부분 */
+footer{
+    padding : 3% 13.541%;
+    box-sizing: border-box;
+    background-color: #645959;
+}
+
+footer ul{
+    text-align: center;
+}
+
+footer ul li{
+    margin : 20px;
+    display: inline-block;
+}
+
+footer ul li a{
+    color: #ececee;
+    font-weight: bold;
+}
+
+footer hr{
+    margin: 0 auto;
+}
+
+footer p{
+    margin : 20px 0;
+    font-size: 12px;
+    color: #ececee;
+}
+
+footer div:last-child a{
+    margin : 20px 10px;
+    display: inline-block;
+}
+
+footer div:last-child a img{
+    border : 2px solid #ececee;
+    border-radius: 50%;
+    padding : 5px;
+}
+/* 푸터 부분 */
