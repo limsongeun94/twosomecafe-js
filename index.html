@@ -1019,6 +1019,7 @@
 
     <div id="email_gather_info" class="modal_overlay">
       <div class="email_gather_content modal">
+        <button onclick="closeModal('email_gather_info')">닫기</button>
         <h2>이메일 무단수집거부</h2>
         <p style="padding: 16px 0; text-align: justify">
           본 웹사이트에 게시된 이메일 주소가 전자우편수집 프로그램이나 그 밖의
@@ -1032,6 +1033,7 @@
 
     <div id="regal_notice_info" class="modal_overlay">
       <div class="regal_notice_content modal">
+        <button onclick="closeModal('regal_notice_info')">닫기</button>
         <h2>법적고지</h2>
         <div class="scroll-area" style="height: calc(100% - 62px)">
           <p>
@@ -1096,10 +1098,10 @@
           >
         </li>
         <li>
-          <a onclick="setModal(email_gather_info)">이메일 무단수집거부</a>
+          <a onclick="setModal('email_gather_info')">이메일 무단수집거부</a>
         </li>
         <li>
-          <a onclick="setModal(regal_notice_info)">법적고지</a>
+          <a onclick="setModal('regal_notice_info')">법적고지</a>
         </li>
       </ul>
       <hr />

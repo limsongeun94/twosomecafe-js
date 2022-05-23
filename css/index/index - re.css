@@ -702,15 +702,20 @@ header {
 
 /* 모달 부분 */
 .modal_overlay {
+  /* 모달의 z-index는 9999나 99999처럼 매우 큰 값을 주는게 일반적 */
+  z-index: 9999;
   width: 100vw;
   height: 100vh;
-  position: absolute;
+  /* position: absolute; absolute가 아닌 fixed를 사용 */
+  position: fixed;
   left: 0;
   top: 0;
-  display: flex;
+  /* display: flex; 초기값은 display가 none이어야 모달이 보이지 않음 */
+  display: none;
   justify-content: center;
   align-items: center;
-  background-color: #333030;
+  /* background-color: #333030; rgba를 사용하면 투명한 딤처리가 가능 */
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
 .modal {
