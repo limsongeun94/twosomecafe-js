@@ -1,0 +1,138 @@
+/* 네브바 */
+/* 네브바 */
+/* 네브바 */
+header {
+  width: 1400px;
+  height: 100px;
+  padding: 0 260px;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+header > img {
+  padding: 32px 0;
+}
+
+.show_menu_wrap {
+  display: flex;
+}
+
+.show_menu {
+  font-size: 18px;
+  padding: 10px 0;
+  width: 96px;
+  text-align: center;
+  margin-left: 100px;
+  position: relative;
+  margin-left: 100px;
+  font-weight: bold;
+}
+
+.show_menu::after {
+  transition: transform 0.1s;
+  content: "";
+  width: 96px;
+  transform: scaleX(0);
+}
+
+.show_menu:hover:after {
+  transform: scaleX(1);
+  position: absolute;
+  height: 2px;
+  left: 0px;
+  bottom: -3px;
+  border-bottom: 3px solid #645959;
+}
+
+#hide_menu_wrap {
+  display: none;
+  /* display: flex; */
+  flex-direction: row;
+  justify-content: end;
+  width: 1400px;
+  height: 300px;
+  padding: 0 260px;
+  position: absolute;
+  left: 0px;
+  top: 100px;
+  background-color: white;
+  z-index: 9999;
+}
+
+.hide_menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 246px;
+  width: 96px;
+  margin-left: 100px;
+}
+
+.hide_menu > div {
+  padding: 10px 0;
+}
+
+/* 네브바 */
+/* 네브바 */
+/* 네브바 */
+
+/* 모달 */
+/* 모달 */
+/* 모달 */
+.modal_overlay {
+  /* 모달의 z-index는 9999나 99999처럼 매우 큰 값을 주는게 일반적 */
+  z-index: 99999;
+  /* position: absolute; absolute가 아닌 fixed를 사용 */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  /* display: flex; 초기값은 display가 none이어야 모달이 보이지 않음 */
+  display: none;
+  justify-content: center;
+  align-items: center;
+  /* background-color: #333030; rgba를 사용하면 투명한 딤처리가 가능 */
+  /* background-color: rgba(0, 0, 0, 0.9); */
+}
+.modal-dimm {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal {
+  padding: 30px;
+  width: 400px;
+  height: 500px;
+  background-color: white;
+  border: 1px solid #645959;
+  position: relative;
+  overflow-y: auto;
+}
+
+.modal_title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.modal_close {
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  cursor: pointer;
+}
+
+.modal_content {
+  padding-top: 24px;
+  overflow: auto;
+}
+/* 모달 */
+/* 모달 */
+/* 모달 */

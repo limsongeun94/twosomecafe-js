@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>투썸플레이스 - A Towsome Place</title>
     <link rel="stylesheet" type="text/css" href="css/index/index - re.css" />
+    <link rel="stylesheet" type="text/css" href="css/common.css" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css"
@@ -20,7 +21,6 @@
     <script type="text/javascript" src="js/slider.js"></script>
     <script type="text/javascript" src="js/gally.js"></script>
     <script type="text/javascript" src="js/jquery-scrollbar.js"></script>
-    <script type="text/javascript" src="js/modal.js"></script>
     <script>
       $(function () {
         $(window).on("load", function () {
@@ -74,203 +74,47 @@
   </head>
 
   <body>
-    <header>
-      <div class="header_inner">
-        <div class="header_logo">
-          <a href="index.html"
-            ><img src="img/fixed/navigation/bi_img_text.png" alt="text BI"
-          /></a>
+    <!-- 네브바 -->
+    <!-- 네브바 -->
+    <!-- 네브바 -->
+    <header id="header">
+      <img src="img/fixed/navigation/bi_img_text.png" width="259px" height="36px" />
+      <div class="show_menu_wrap">
+        <div class="show_menu">브랜드</div>
+        <div class="show_menu">메뉴</div>
+        <div class="show_menu">앱 멤버십</div>
+        <div class="show_menu">창업안내</div>
+        <div class="show_menu">이벤트</div>
+      </div>
+      <div id="hide_menu_wrap">
+        <div class="hide_menu">
+          <div>투썸플레이스</div>
         </div>
-        <div class="header_actions">
-          <!-- 여기서부터 없애기 -->
-          <div class="header_actions_top">
-            <a href="html/account/service_term_agree_page.html"
-              ><img
-                src="img/fixed/navigation/2849831_account_avatar_person_profile_multimedia_icon.png"
-                alt="account"
-                width="24px"
-            /></a>
-            <a
-              ><img
-                src="img/fixed/navigation/2849824_store_shopping_market_buy_shop_icon.png"
-                alt="shopping"
-                width="24px"
-            /></a>
-            <a href="html/map/map.html"
-              ><img
-                src="img/fixed/navigation/2849828_pointer_map_location_place_multimedia_icon.png"
-                alt="map"
-                width="24px"
-            /></a>
-          </div>
-          <!-- 여기까지 없애기 -->
-
-          <nav class="header_actions_bottom">
-            <div class="main_menu">
-              <span class="main_menu_label"
-                ><a href="html/brand/brand.html">투썸플레이스 소개</a></span
-              >
-              <div class="sub_menu">
-                <div class="sub_menu_item">
-                  <a href="html/brand/brand.html">투썸플레이스</a>
-                </div>
-              </div>
-            </div>
-            <div class="main_menu">
-              <span class="main_menu_label"
-                ><a href="html/menu/coffee_beverage.html">메뉴 이야기</a></span
-              >
-              <div class="sub_menu">
-                <div class="sub_menu_item">
-                  <a href="html/menu/coffee_beverage.html">커피 & 음료</a>
-                </div>
-                <div class="sub_menu_item">
-                  <a href="html/menu/icecream.html">아이스크림</a>
-                </div>
-                <div class="sub_menu_item">
-                  <a href="html/menu/cake.html">케이크</a>
-                </div>
-                <div class="sub_menu_item">
-                  <a href="html/menu/deli.html">델리</a>
-                </div>
-                <div class="sub_menu_item">
-                  <a href="html/menu/bread.html">빵</a>
-                </div>
-                <div class="sub_menu_item">
-                  <a href="html/menu/md.html">MD</a>
-                </div>
-              </div>
-            </div>
-            <div class="main_menu">
-              <span class="main_menu_label"
-                ><a href="html/app_membership/app.html">앱 & 멤버십</a></span
-              >
-              <div class="sub_menu">
-                <div class="sub_menu_item">
-                  <a href="html/app_membership/app.html">앱</a>
-                </div>
-                <div class="sub_menu_item">
-                  <a href="html/app_membership/membership.html">멤버십</a>
-                </div>
-              </div>
-            </div>
-            <div class="main_menu">
-              <span class="main_menu_label"
-                ><a href="html/franchise/information.html">창업안내</a></span
-              >
-              <div class="sub_menu">
-                <div class="sub_menu_item">
-                  <a href="html/franchise/information.html">창업안내</a>
-                </div>
-                <div class="sub_menu_item">
-                  <a href="html/franchise/consultation.html">상담신청</a>
-                </div>
-                <div class="sub_menu_item">
-                  <a href="html/franchise/faq.html">FAQ</a>
-                </div>
-              </div>
-            </div>
-            <div class="main_menu">
-              <span class="main_menu_label"
-                ><a href="html/event/event.html">이벤트</a></span
-              >
-              <div class="sub_menu">
-                <div class="sub_menu_item">
-                  <a href="html/event/event.html">이벤트</a>
-                </div>
-              </div>
-            </div>
-          </nav>
+        <div class="hide_menu">
+          <div>커피 & 음료</div>
+          <div>아이스크림</div>
+          <div>케이크</div>
+          <div>델리</div>
+          <div>빵</div>
+          <div>md</div>
         </div>
-        <div id="page-main" class="hamberger_menu">
-          <img
-            id="hambuger"
-            src="img/fixed/navigation/134216_menu_lines_hamburger_icon.png"
-            height="20px"
-          />
-          <aside>
-            <img
-              id="close_btn"
-              src="img/fixed/modal/293657_x_icon_white.png"
-              width="25px"
-            />
-            <ul>
-              <div class="nav_icon">
-                <img
-                  src="img/fixed/navigation/2849831_account_avatar_person_profile_multimedia_icon_white.png"
-                />
-                <img
-                  src="img/fixed/navigation/2849824_store_shopping_market_buy_shop_icon_white.png"
-                />
-                <img
-                  src="img/fixed/navigation/2849828_pointer_map_location_place_multimedia_icon_white.png"
-                />
-              </div>
-              <hr />
-              <li class="expantion_title">투썸플레이스 소개</li>
-              <div class="expantion_item">
-                <div class="expantion_item_menu">투썸플레이스</div>
-              </div>
-              <hr />
-              <li class="expantion_title">메뉴 이야기</li>
-              <div class="expantion_item">
-                <div class="expantion_item_menu">커피 & 음료</div>
-                <div class="expantion_item_menu">아이스크림</div>
-                <div class="expantion_item_menu">케이크</div>
-                <div class="expantion_item_menu">델리</div>
-                <div class="expantion_item_menu">빵</div>
-                <div class="expantion_item_menu">MD</div>
-              </div>
-              <hr />
-              <li class="expantion_title">앱 & 멤버십</li>
-              <div class="expantion_item">
-                <div class="expantion_item_menu">앱</div>
-                <div class="expantion_item_menu">멤버십</div>
-              </div>
-              <hr />
-              <li class="expantion_title">창업안내</li>
-              <div class="expantion_item">
-                <div class="expantion_item_menu">창업안내</div>
-                <div class="expantion_item_menu">상담신청</div>
-                <div class="expantion_item_menu">FAQ</div>
-              </div>
-              <hr />
-              <li class="expantion_title">이벤트</li>
-              <div class="expantion_item">
-                <div class="expantion_item_menu">이벤트</div>
-              </div>
-              <hr />
-            </ul>
-            <div class="sns_wrap_mb">
-              <a
-                href="https://www.facebook.com/ATWOSOMEPLACE/"
-                target="_blank"
-                title="facebook"
-                ><img
-                  src="img/fixed/footer/book_face_facebook_fb_icon.png"
-                  width="30px"
-              /></a>
-              <a
-                href="https://www.instagram.com/official_atwosomeplace/?igshid=1vu3rl2z5ps7n"
-                target="_blank"
-                title="instagram"
-                ><img
-                  src="img/fixed/footer/ig_instagram_photo_icon.png"
-                  width="30px"
-              /></a>
-              <a
-                href="https://www.youtube.com/channel/UCDjdk0ufvcvV08hAm_vF06Q"
-                target="_blank"
-                title="youtube"
-                ><img
-                  src="img/fixed/footer/play_video_youtube_youtuber_icon.png"
-                  width="30px"
-              /></a>
-            </div>
-          </aside>
+        <div class="hide_menu">
+          <div>앱</div>
+          <div>멤버십</div>
+        </div>
+        <div class="hide_menu">
+          <div>창업안내</div>
+          <div>상담신청</div>
+          <div>FAQ</div>
+        </div>
+        <div class="hide_menu">
+          <div>이벤트</div>
         </div>
       </div>
     </header>
+    <!-- 네브바 -->
+    <!-- 네브바 -->
+    <!-- 네브바 -->
 
     <div class="for_height"></div>
 
@@ -1029,7 +873,7 @@
     <div id="legal_modal" class="modal_overlay" >
       <div class="modal-dimm" onclick = "closeModal('legal_modal')"></div>
       <div class="modal">
-        <p id="legal_modal_title" class="modal_title">ㅎㅇ</p>
+        <p id="legal_modal_title" class="modal_title"></p>
         <img class="modal_close"  onclick = "closeModal('legal_modal')" src="img/fixed/modal/293657_x_icon.png" width="24px"></img>
         <p id="legal_modal_content" class="modal_content"></p>
       </div>
@@ -1098,4 +942,5 @@
       </div>
     </footer>
   </body>
+  <script type="text/javascript" src="js/common.js"></script>
 </html>

@@ -1,5 +1,8 @@
 /* html::-webkit-scrollbar, body::-webkit-scrollbar{ display: none; } */
 
+/* 공통부분 */
+/* 공통부분 */
+/* 공통부분 */
 @import url("https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap");
 
 * {
@@ -45,118 +48,9 @@ button {
   font-weight: normal;
   text-align: center;
 }
-
-/* GNB 부분 */
-header {
-  width: 100%;
-  box-sizing: border-box;
-  background-color: #fff;
-  /* position: sticky; */
-  position: fixed;
-  left: 0;
-  top: 0px;
-  z-index: 1000;
-  box-shadow: 0 4px 12px rgba(64, 59, 59, 0.3);
-}
-
-.header_inner {
-  width: 1400px;
-  height: 100%;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-}
-
-.header_logo {
-  height: 120px;
-  display: flex;
-  align-items: center;
-}
-
-.header_actions {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  min-height: 120px;
-  width: 900px;
-}
-
-.header_actions_top {
-  margin-top: 27px;
-  display: flex;
-  justify-content: flex-end;
-}
-.header_actions_top > * {
-  margin-left: 16px;
-}
-
-.header_actions_bottom {
-  margin-top: 16px;
-  display: flex;
-  justify-content: space-between;
-  position: relative;
-  bottom: 0;
-  padding-bottom: 32px;
-  color: #645959;
-}
-
-.header_actions_bottom > .main_menu {
-  position: relative;
-}
-
-.main_menu_label {
-  position: relative;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-.main_menu_label::before {
-  position: absolute;
-  width: 100%;
-  height: 5px;
-  top: 100%;
-  left: 0;
-  content: "";
-  border-bottom: 5px solid transparent;
-  transition: border-bottom-color;
-  transition-duration: 0.5s;
-}
-
-.main_menu:hover .main_menu_label::before {
-  border-bottom-color: #645959;
-}
-
-.header_actions_bottom:hover .sub_menu {
-  height: 200px;
-}
-
-.sub_menu {
-  overflow: hidden;
-  height: 0;
-  transition-duration: 0.2s;
-  transition-property: height;
-}
-
-.sub_menu_item:first-child {
-  margin-top: 32px;
-}
-.sub_menu_item {
-  margin-top: 8px;
-  cursor: pointer;
-}
-.sub_menu_item:hover {
-  font-weight: bold;
-}
-
-.hamberger_menu {
-  display: none;
-}
-
-.for_height {
-  height: 120px;
-}
-/* GNB 부분 */
+/* 공통부분 */
+/* 공통부분 */
+/* 공통부분 */
 
 /* 메인배너 대슬라이드 부분 */
 .main_banner {
@@ -699,60 +593,6 @@ header {
   transform: scale(1.1);
 }
 /* sns 부분 */
-
-/* 모달 부분 */
-.modal_overlay {
-  /* 모달의 z-index는 9999나 99999처럼 매우 큰 값을 주는게 일반적 */
-  z-index: 99999;
-  /* position: absolute; absolute가 아닌 fixed를 사용 */
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  /* display: flex; 초기값은 display가 none이어야 모달이 보이지 않음 */
-  display: none;
-  justify-content: center;
-  align-items: center;
-  /* background-color: #333030; rgba를 사용하면 투명한 딤처리가 가능 */
-  /* background-color: rgba(0, 0, 0, 0.9); */
-}
-.modal-dimm {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  top: 0;
-  background-color: rgba(0, 0, 0, 0.9);
-}
-
-.modal {
-  padding: 30px;
-  width: 400px;
-  height: 500px;
-  background-color: white;
-  border: 1px solid #645959;
-  position: relative;
-  overflow-y: auto;
-}
-
-.modal_title {
-  font-size: 24px;
-  font-weight: bold;
-}
-
-.modal_close {
-  position: absolute;
-  right: 30px;
-  top: 30px;
-  cursor: pointer;
-}
-
-.modal_content {
-  padding-top: 24px;
-  overflow: auto;
-}
-/* 모달 부분 */
 
 /* 롤링스크롤 */
 .news {
