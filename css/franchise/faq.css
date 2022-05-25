@@ -1,283 +1,228 @@
-*{
-    margin : 0;
-    padding : 0;
-    color : #645959;
+* {
+  margin: 0;
+  padding: 0;
+  color: #645959;
 }
 
 body {
-    min-width: 1440px;
+  min-width: 1440px;
 }
 
-a{
-    text-decoration: none;
+a {
+  vertical-align: middle;
+  text-decoration: none;
 }
 
-ul li{
-    list-style-type: none;
+header {
+  width: 100%;
+  height: 120px;
+  box-sizing: border-box;
+  background-color: #fff;
+  position: sticky;
+  left: 0;
+  top: 0px;
 }
 
-/* GNB 부분 */
-header{
-    width: 100%;
-    box-sizing: border-box;
-    background-color: #fff;
-    /* position: sticky; */
-    position: fixed;
-    left:0; top:0px;
-    z-index: 1000;
-    box-shadow: 0 4px 12px rgba(64, 59, 59, 0.3);
+nav {
+  height: 120px;
+  position: relative;
+  box-shadow: 0 4px 12px rgba(64, 59, 59, 0.3);
 }
 
-.header_inner{
-    width: 1400px;
-    height: 100%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
+.twosome_logo_text {
+  position: absolute;
+  left: 13.541%;
+  top: 50%;
+  margin-top: -18px;
 }
 
-.header_logo{
-    height: 120px;
-    display: flex;
-    align-items: center;
+ul li {
+  list-style-type: none;
+  display: inline-block;
 }
 
-.header_actions{
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    min-height: 120px;
-    width: 900px;
+.nav_top {
+  position: absolute;
+  right: 13.541%;
+  bottom: 50%;
 }
 
-.header_actions_top{
-    margin-top: 27px;
-    display: flex;
-    justify-content: flex-end;
-}
-.header_actions_top > *{
-    margin-left: 16px;
+.nav_top li {
+  margin-left: 10px;
 }
 
-.header_actions_bottom{
-    margin-top: 16px;
-    display: flex;
-    justify-content: space-between;
-    position: relative;
-    bottom: 0;
-    padding-bottom: 32px;
-    color: #645959;
+.nav_bottom {
+  position: absolute;
+  right: 13.541%;
+  top: 50%;
 }
 
-.header_actions_bottom > .main_menu{
-    position: relative;
+.nav_bottom li {
+  margin-left: 100px;
+  box-sizing: border-box;
 }
 
-.main_menu_label{
-    position: relative;
-    cursor: pointer;
-    font-weight: bold;
+.nav_bottom li a {
+  padding: 0 20px;
+  line-height: 40px;
+  text-decoration: none;
+  color: #645959;
+  display: block;
 }
 
-.main_menu_label::before{
-    position:absolute;
-    width:100%;
-    height: 5px;
-    top: 100%;
-    left: 0;
-    content: "";
-    border-bottom: 5px solid transparent;
-    transition: border-bottom-color;
-    transition-duration: 0.5s;
+.nav_bottom li a:hover {
+  border-bottom: 5px solid #645959;
 }
 
-.main_menu:hover .main_menu_label::before{
-    border-bottom-color: #645959;
+.sub_visual {
+  background: url("../../img/fixed/suv_visual/coffee-maker-machine-making-espresso-shot.jpg")
+    no-repeat bottom;
+  background-size: 1920px auto;
 }
 
-.header_actions_bottom:hover .sub_menu{
-    height: 200px;
+:is(.sub_visual h1, .sub_visual p, .sub_visual ul) {
+  text-align: center;
+  color: #ececee;
 }
 
-.sub_menu{
-    overflow: hidden;
-    height: 0;
-    transition-duration: 0.2s;
-    transition-property: height;
+.sub_visual h1 {
+  padding: 100px 0 30px 0;
 }
 
-.sub_menu_item:first-child{
-    margin-top: 32px;
-}
-.sub_menu_item{
-    margin-top: 8px;
-    cursor: pointer;
-}
-.sub_menu_item:hover{
-    font-weight: bold;
+.sub_visual ul {
+  padding: 30px 0 100px 0;
 }
 
-.hamberger_menu {
-    display: none;
+.sub_visual ul li a {
+  border: 1px solid #ececee;
+  width: 180px;
+  line-height: 38px;
+  text-align: center;
+  text-decoration: none;
+  color: #ececee;
+  background-color: rgba(64, 59, 59, 0.6);
+  display: block;
 }
 
-.for_height{
-    height: 120px;
-}
-/* GNB 부분 */
-
-
-.sub_visual{
-    background: url("../../img/fixed/suv_visual/coffee-maker-machine-making-espresso-shot.jpg") no-repeat bottom;
-    background-size: 1920px auto;
+.sub_visual ul li a:hover {
+  color: #645959;
+  background-color: #ececee;
 }
 
-:is(.sub_visual h1, .sub_visual p, .sub_visual ul){
-    text-align: center;
-    color: #ececee;
+.sub_visual ul li:last-child a {
+  color: #645959;
+  background-color: #ececee;
 }
 
-.sub_visual h1{
-    padding: 100px 0 30px 0;
+/*  */
+/*  */
+/*  */
+
+.contents {
+  margin: 100px auto;
+  width: 1400px;
+  background-color: #ececee;
 }
 
-.sub_visual ul{
-    padding: 30px 0 100px 0;
+details {
+  cursor: pointer;
+  border-top: 1px solid #ececee;
 }
 
-.sub_visual ul li {
-    display: inline-block;
+details:last-child {
+  border: 1px solid #ececee;
 }
 
-.sub_visual ul li a{
-    border: 1px solid #ececee;
-    width : 180px;
-    line-height: 38px;
-    text-align: center;
-    text-decoration: none;
-    color: #ececee;
-    background-color: rgba(64, 59, 59, 0.6);
-    display: block;
+details[open] > p {
+  position: relative;
+  padding: 30px 50px 30px 120px;
 }
 
-.sub_visual ul li a:hover{
-    color: #645959;
-    background-color: #ececee;
+details[open] > p::before {
+  position: absolute;
+  content: "A";
+  font-size: 1.5em;
+  left: 70px;
+  top: 26px;
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
 }
 
-.sub_visual ul li:last-child a{
-    color: #645959;
-    background-color: #ececee;
+details[open] > summary {
+  padding-bottom: 30px;
 }
 
-li dl{
-    width: 1400px;
+summary {
+  position: relative;
+  padding: 30px 50px 30px 120px;
+  background-color: white;
 }
 
-li dl dt{
-    font-size: 24px;
+summary::before {
+  position: absolute;
+  content: "Q";
+  font-size: 1.5em;
+  width: 32px;
+  line-height: 32px;
+  left: 70px;
+  top: 26px;
 }
 
-.contents{
-    margin : 100px auto;
-    width: 1400px;
+summary::marker {
+  content: none;
 }
 
-input[type=checkbox]{
-    display: none;
+/* summary::marker::before {
+  position: absolute;
+  content: "";
+  width: 32px;
+  line-height: 32px;
+  left: 0;
+  top: 0;
+} */
+
+/*  */
+/*  */
+/*  */
+
+footer {
+  padding: 3% 13.541%;
+  height: 360px;
+  box-sizing: border-box;
+  background-color: #645959;
 }
 
-.contents ul input[type=checkbox]:checked + li .board_a{
-    display: block;
+footer ul {
+  text-align: center;
 }
 
-.contents ul li{
-    border-top : 1px solid #ececee;
-    box-sizing: border-box;
+footer ul li {
+  margin: 20px;
 }
 
-.contents ul li:nth-of-type(7){
-    border-bottom: 1px solid #ececee;
+footer ul li a {
+  color: #ececee;
+  font-weight: bold;
 }
 
-.board_q{
-    padding: 30px;
-    overflow:hidden;
+footer hr {
+  margin: 0 auto;
 }
 
-.board_q > dt {
-    float: left;
-    height: 32px;
-    line-height: 32px;
-    width: 100px;
+footer p {
+  margin: 20px 0;
+  font-size: 12px;
+  color: #ececee;
 }
 
-.board_q > dd {
-    float: left;
-    height: 32px;
-    line-height: 32px;
+footer div:last-child a {
+  margin: 20px 10px;
+  display: inline-block;
 }
 
-.board_a > dt {
-    float: left;
-    height: 32px;
-    line-height: 32px;
-    width: 100px;
+footer div:last-child a img {
+  border: 2px solid #ececee;
+  border-radius: 50%;
+  padding: 5px;
 }
-
-.board_a > dd {
-    float: left;
-    width: calc(100% - 100px);
-}
-
-.board_a{
-    padding : 30px;
-    display: none;
-    background-color: #ececee;
-    overflow:hidden;
-}
-
-
-/* 푸터 부분 */
-footer{
-    padding : 3% 13.541%;
-    box-sizing: border-box;
-    background-color: #645959;
-}
-
-footer ul{
-    text-align: center;
-}
-
-footer ul li{
-    margin : 20px;
-    display: inline-block;
-}
-
-footer ul li a{
-    color: #ececee;
-    font-weight: bold;
-}
-
-footer hr{
-    margin: 0 auto;
-}
-
-footer p{
-    margin : 20px 0;
-    font-size: 12px;
-    color: #ececee;
-}
-
-footer div:last-child a{
-    margin : 20px 10px;
-    display: inline-block;
-}
-
-footer div:last-child a img{
-    border : 2px solid #ececee;
-    border-radius: 50%;
-    padding : 5px;
-}
-/* 푸터 부분 */
