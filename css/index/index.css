@@ -122,6 +122,8 @@ button {
 /* 베스트메뉴 소슬라이드 부분 */
 
 /* 메뉴 부분 */
+/* 메뉴 부분 */
+/* 메뉴 부분 */
 .menu {
   background-color: #ececee;
 }
@@ -243,14 +245,22 @@ button {
   display: none;
 }
 /* 메뉴 부분 */
+/* 메뉴 부분 */
+/* 메뉴 부분 */
 
+/* 동영상 부분 */
+/* 동영상 부분 */
 /* 동영상 부분 */
 .video_wrap {
   line-height: 0;
   text-align: center;
 }
 /* 동영상 부분 */
+/* 동영상 부분 */
+/* 동영상 부분 */
 
+/* 서포트 레이어 부분 */
+/* 서포트 레이어 부분 */
 /* 서포트 레이어 부분 */
 .support_img_wrap {
   margin-bottom: 100px;
@@ -318,7 +328,11 @@ button {
   top: 400px;
 }
 /* 서포트 레이어 부분 */
+/* 서포트 레이어 부분 */
+/* 서포트 레이어 부분 */
 
+/* 프랜차이즈 부분 */
+/* 프랜차이즈 부분 */
 /* 프랜차이즈 부분 */
 .franchisee {
   background-color: #ececee;
@@ -395,6 +409,8 @@ button {
   width: 100%;
 }
 /* 프랜차이즈 부분 */
+/* 프랜차이즈 부분 */
+/* 프랜차이즈 부분 */
 
 /* 스페이스 디자인 플렉스 부분 */
 .space_design {
@@ -431,11 +447,18 @@ button {
 .space_design_info {
   margin: 0 auto;
   width: 733px;
-  /* display: none; */
+  display: none;
 }
 
 .space_design_info table td {
   padding: 5px 0;
+}
+
+.space_design_explain > p {
+  text-align: center;
+  font: 20px "IBMPlexSansKR-Bold", sans-serif;
+  font-weight: bold;
+  padding: 6px;
 }
 
 .space_design_info table tr:first-child td {
@@ -447,24 +470,6 @@ button {
   font-weight: bold;
 }
 /* 스페이스 디자인 플렉스 부분 */
-
-/* 스토어 디자인 부분 */
-.store_design_pc {
-  margin-bottom: 100px;
-}
-
-.store_design_pc .inner_list li:nth-child(n + 1):nth-child(-n + 3) {
-  margin-bottom: 30px;
-}
-
-.store_design_pc .inner_list li {
-  margin-right: 50px;
-}
-
-.store_design_mb {
-  display: none;
-}
-/* 스토어 디자인 부분 */
 
 /* 미션 부분 */
 .scroll {
@@ -677,419 +682,3 @@ footer div:last-child a img {
   padding: 5px;
 }
 /* 푸터 부분 */
-
-@media all and (max-width: 767px) {
-  body {
-    min-width: 350px;
-  }
-
-  .section_title {
-    padding: 50px 0 30px;
-  }
-
-  /* GNB 부분 */
-  header {
-    height: 50px;
-  }
-
-  nav {
-    height: 50px;
-  }
-
-  .header_inner {
-    width: 94%;
-    padding: 0 3%;
-  }
-
-  .header_logo {
-    position: relative;
-    height: 20px;
-    /* left: 3%; */
-    top: calc(50% - 10px);
-  }
-
-  .header_logo img {
-    height: 20px;
-  }
-
-  .header_actions {
-    display: none;
-  }
-
-  .menu_button {
-    display: block;
-  }
-
-  .hamberger_menu {
-    display: block;
-  }
-
-  .hamberger_menu #hambuger {
-    position: relative;
-    /* right:3%; */
-    top: calc(50% - 10px);
-    display: block;
-  }
-
-  .for_height {
-    height: 50px;
-  }
-
-  #page-main aside {
-    width: 80vw;
-    height: 100%;
-    background-color: #645959;
-    position: fixed;
-    right: -80vw;
-    top: 0;
-  }
-
-  aside ul li {
-    color: #ececee !important;
-    list-style-type: none;
-    padding: 20px 0;
-    padding-left: 30px;
-  }
-
-  .nav_icon {
-    margin: 20px 0;
-    margin-left: 30px;
-    line-height: 0;
-  }
-
-  .nav_icon > img {
-    width: 30px;
-  }
-
-  #close_btn {
-    position: absolute;
-    left: -30px;
-    top: 10px !important;
-    /* display: none; */
-    visibility: hidden;
-  }
-
-  aside.open::before {
-    position: absolute;
-    content: "";
-    width: 200%;
-    height: 100%;
-    left: -200%;
-    top: 0;
-    background-color: rgba(0, 0, 0, 0.7);
-  }
-
-  .open #close_btn {
-    /* display: block; */
-    visibility: visible;
-  }
-
-  .sns_wrap_mb {
-    padding: 20px 0;
-    padding-right: 30px;
-    display: flex;
-    justify-content: right;
-    line-height: 0;
-  }
-
-  .sns_wrap_mb a {
-    border: 2px solid #ececee;
-    border-radius: 50%;
-    padding: 5px;
-    margin-left: 10px;
-  }
-
-  .expantion_item {
-    height: 0;
-    overflow: hidden;
-  }
-
-  .expantion_item.open {
-    height: auto;
-    padding-left: 30px;
-    padding-bottom: 20px;
-  }
-
-  .expantion_item_menu {
-    color: #ececee;
-  }
-
-  /* GNB 부분 */
-
-  /* 메인배너 부분 */
-  .main_banner {
-    /* display: none; */
-    visibility: hidden;
-    height: 0;
-  }
-
-  .mobile_main_banner {
-    /* display: block; */
-    visibility: visible;
-    height: auto;
-  }
-
-  .mobile_main_banner img {
-    width: 100%;
-  }
-  /* 메인배너 부분 */
-
-  .bx-wrapper {
-    height: unset !important;
-  }
-
-  /* 베스트메뉴 부분 */
-  .best_menu_wrap {
-    height: 176px;
-  }
-  .best_menu_wrap img {
-    height: 104px;
-  }
-  /* 베스트메뉴 부분 */
-
-  /* 메뉴 부분 */
-  .menu {
-    display: none;
-  }
-
-  .mobile_menu {
-    display: block;
-    background-color: #ececee;
-    padding-bottom: 50px;
-  }
-
-  .mobile_coffee_beverage {
-    margin-bottom: 16px;
-    border-radius: 10px;
-    background-color: white;
-    width: 65%;
-    min-width: 307px;
-  }
-
-  .mobile_cake {
-    margin-bottom: 16px;
-  }
-
-  .mobile_cake > a {
-    border-radius: 10px;
-    padding: 16px;
-    background-color: white;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    box-sizing: border-box;
-  }
-
-  .mobile_ice_cream {
-    border-radius: 10px;
-    padding: 16px;
-    width: 49%;
-    background-color: white;
-    box-sizing: border-box;
-  }
-
-  .mobile_deli {
-    border-radius: 10px;
-    padding: 16px;
-    width: 49%;
-    background-color: white;
-    box-sizing: border-box;
-  }
-
-  .mobile_bread {
-    border-radius: 10px;
-    padding: 16px;
-    width: 49%;
-    background-color: white;
-    box-sizing: border-box;
-  }
-
-  .mobile_md {
-    border-radius: 10px;
-    padding: 16px;
-    width: 49%;
-    background-color: white;
-    box-sizing: border-box;
-  }
-  /* 메뉴 부분 */
-
-  /* 서포트 레이어 부분 */
-  .support_img_wrap {
-    margin: 0 auto;
-    margin-bottom: 50px;
-    position: relative;
-    width: 94%;
-  }
-
-  .layered_image_wrapper_01,
-  .layered_image_wrapper_02,
-  .layered_image_wrapper_03,
-  .layered_image_wrapper_04 {
-    width: 50%;
-  }
-
-  :is(.layered_image_wrapper_01, .layered_image_wrapper_02, .layered_image_wrapper_03, .layered_image_wrapper_04)
-    img {
-    width: 100%;
-  }
-
-  .layer_text_01_1,
-  .layer_text_02_1,
-  .layer_text_03_1,
-  .layer_text_04_1 {
-    left: 5%;
-    top: 60%;
-  }
-
-  .layer_text_01_2,
-  .layer_text_02_2,
-  .layer_text_03_2,
-  .layer_text_04_2 {
-    width: 90%;
-    left: 5%;
-    top: 70%;
-  }
-  /* 서포트 레이어 부분 */
-
-  /* 프랜차이즈 부분 */
-  .franchisee_container_a {
-    padding-bottom: 50px;
-    width: 100%;
-    flex-wrap: wrap;
-  }
-
-  .franchisee_container_a img {
-    width: 100%;
-  }
-
-  .franchisee_container_b {
-    padding-top: 30px;
-    margin: 0 auto;
-  }
-  /* 프랜차이즈 부분 */
-
-  /* 스페이스 디자인 부분 */
-  .space_design {
-    margin-bottom: 50px;
-  }
-
-  .space_design_img_wrap {
-    width: 100%;
-  }
-
-  .space_design_img {
-    flex: 1 1 4.314%;
-  }
-
-  .space_design_info {
-    width: 94%;
-  }
-  /* 스페이스 디자인 부분 */
-
-  /* 스토어 디자인 부분 */
-  .store_design_pc {
-    display: none;
-  }
-
-  .store_design_mb {
-    display: block;
-    margin-bottom: 50px;
-  }
-
-  .store_design_mb .photo img {
-    width: 100%;
-  }
-
-  .store_design_mb .inner_list li {
-    width: 24.25%;
-  }
-
-  .store_design_mb .inner_list li img {
-    width: 100%;
-  }
-  /* 스토어 디자인 부분 */
-
-  /* 미션 부분 */
-  .scroll {
-    height: 350px;
-  }
-
-  .space_design_img > img {
-    width: 87.058vw !important;
-  }
-
-  .mission_img_wrapper {
-    background: none;
-  }
-
-  .floating {
-    flex-basis: calc(100% / 3);
-  }
-  .mission_img {
-    padding: 0;
-    text-align: center;
-  }
-  .mission_img img {
-    width: 72px;
-    height: 72px;
-  }
-  /* 미션 부분 */
-
-  /* 이벤트 부분 */
-  .event_wrap {
-    width: 94%;
-  }
-
-  .event_wrap img {
-    margin-right: 1%;
-    width: 32.666%;
-  }
-
-  .event_wrap a:last-child img {
-    margin-right: 0;
-  }
-  /* 이벤트 부분 */
-
-  /* SNS 부분 */
-  .sns_container {
-    width: 94%;
-  }
-
-  .sns_container div {
-    width: calc(100% / 3);
-    height: unset;
-  }
-
-  .sns_img_wrap:last-child {
-    display: none;
-  }
-  /* SNS 부분 */
-
-  /* 밑에 흉한 글씨 */
-  #notice5 {
-    display: none;
-  }
-  /* 밑에 흉한 글씨 */
-
-  /* 푸터 부분 */
-  footer {
-    padding: 3%;
-    box-sizing: border-box;
-    background-color: #645959;
-  }
-
-  footer ul li {
-    margin: 0 20px;
-    margin-bottom: 16px;
-    display: inline-block;
-  }
-
-  footer hr {
-    margin-top: 4px;
-  }
-
-  .sns_wrap {
-    display: none;
-  }
-  /* 푸터 부분 */
-}
