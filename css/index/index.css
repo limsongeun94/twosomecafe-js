@@ -52,66 +52,50 @@ button {
 /* 공통부분 */
 /* 공통부분 */
 
-/* 메인배너 대슬라이드 부분 */
-.main_banner {
-  line-height: 0;
-  visibility: visible;
-  height: auto;
-}
-
-.main_banner_img_paint {
-  width: 100%;
-}
-
-.mobile_main_banner {
-  /* display: none; */
-  visibility: hidden;
-  height: 0;
-}
-
-.slider-container {
-  width: 100%;
-  overflow: hidden;
+/* 대슬라이드 부분 */
+/* 대슬라이드 부분 */
+/* 대슬라이드 부분 */
+.img_container {
   position: relative;
 }
 
-.slider {
-  width: 100%;
-  position: relative;
-}
-
-.slider li {
-  list-style-type: none;
-  float: left;
-}
-
-.slider img {
-  display: block;
+#main_banner {
   width: 100%;
 }
 
-.pagination-container {
+#btn_left {
+  font-size: 2em;
   position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 40px;
-  text-align: center;
-}
-.pagination-container .dot {
-  width: 10px;
-  height: 10px;
-  background-color: white;
-  border-radius: 50%;
-  display: inline-block;
-  cursor: pointer;
-  margin-left: 8px;
+  left: 20px;
+  top: calc(50% - 30px);
 }
 
-.pagination-container .dot.active {
-  background-color: black;
-  cursor: initial;
+#btn_rignt {
+  font-size: 2em;
+  position: absolute;
+  right: 20px;
+  top: calc(50% - 30px);
 }
-/* 메인배너 대슬라이드 부분 */
+
+.num_btn {
+  display: flex;
+  width: 120px;
+  justify-content: space-between;
+  position: absolute;
+  left: calc(50% - 60px);
+  bottom: 30px;
+}
+
+#btn0,
+#btn1,
+#btn2,
+#btn3,
+#btn4 {
+  cursor: pointer;
+}
+/* 대슬라이드 부분 */
+/* 대슬라이드 부분 */
+/* 대슬라이드 부분 */
 
 /* 베스트메뉴 소슬라이드 부분 */
 .bx-wrapper {

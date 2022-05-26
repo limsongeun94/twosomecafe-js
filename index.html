@@ -18,17 +18,9 @@
     <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
     <script type="text/javascript" src="js/tab.js"></script>
     <script type="text/javascript" src="js/slide.js"></script>
-    <script type="text/javascript" src="js/slider.js"></script>
     <script type="text/javascript" src="js/gally.js"></script>
     <script type="text/javascript" src="js/jquery-scrollbar.js"></script>
     <script>
-      $(function () {
-        $(window).on("load", function () {
-          $("#slider_pc").slider({ height: "618px" });
-          $("#slider_mb").slider({ height: "300px" });
-        });
-      });
-
       $(function () {
         var duration = 400;
         var aside = $("#page-main aside");
@@ -116,27 +108,24 @@
     <!-- 네브바 -->
     <!-- 네브바 -->
 
-    <div class="for_height"></div>
-
-    <section class="main_banner">
-      <ul id="slider_pc" class="slider">
-        <li><img src="img/index/main_banner/paint.jpg" /></li>
-        <li><img src="img/index/main_banner/dessert.jpg" /></li>
-        <li><img src="img/index/main_banner/beverage.jpg" /></li>
-        <li><img src="img/index/main_banner/cake.jpg" /></li>
-        <li><img src="img/index/main_banner/towsome_heart.jpg" /></li>
-      </ul>
-    </section>
-
-    <section class="mobile_main_banner">
-      <ul id="slider_mb" class="slider">
-        <li><img src="img/index/main_banner/paint_mobile.jpg" /></li>
-        <li><img src="img/index/main_banner/dessert_mobile.jpg" /></li>
-        <li><img src="img/index/main_banner/beverage_mobile.jpg" /></li>
-        <li><img src="img/index/main_banner/cake_moblie.jpg" /></li>
-        <li><img src="img/index/main_banner/towsome_heart_mobile.jpg" /></li>
-      </ul>
-    </section>
+    <!-- 대 슬라이드 -->
+    <!-- 대 슬라이드 -->
+    <!-- 대 슬라이드 -->
+    <div class="img_container">
+      <img id="main_banner" />
+      <img id="btn_left" onclick="prev_img()" src="img/index/main_banner/2849832_arrows_navigation_arrow_left_back_icon.png" width="60px">
+      <img id="btn_rignt" onclick="next_img()" src="img/index/main_banner/2849833_arrows_navigation_forward_arrow_right_icon.png" width="60px">
+      <div class="num_btn">
+        <div id="btn0">●</div>
+        <div id="btn1">○</div>
+        <div id="btn2">○</div>
+        <div id="btn3">○</div>
+        <div id="btn4">○</div>
+      </div>
+    </div>
+    <!-- 대 슬라이드 -->
+    <!-- 대 슬라이드 -->
+    <!-- 대 슬라이드 -->
 
     <section class="best_menu">
       <h1 class="section_title">BEST MENU</h1>
@@ -943,4 +932,5 @@
     </footer>
   </body>
   <script type="text/javascript" src="js/common.js"></script>
+  <script type="text/javascript" src="js/big_slide.js"></script>
 </html>
