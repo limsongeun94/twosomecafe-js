@@ -2,6 +2,13 @@
 /* 네브바 */
 /* 네브바 */
 header {
+  position: sticky;
+  top: 0px;
+  z-index: 999;
+  box-shadow: 0 4px 10px -2px #645959;
+}
+
+nav {
   width: 100%;
   height: 100px;
   padding: 0 260px;
@@ -13,7 +20,7 @@ header {
   position: relative;
 }
 
-header > img {
+nav > img {
   padding: 32px 0;
 }
 

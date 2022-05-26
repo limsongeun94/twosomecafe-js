@@ -1,15 +1,15 @@
 // 네브바
 // 네브바
 // 네브바
-const header = Array.from(document.getElementsByTagName("header"))[0];
+const nav = Array.from(document.getElementsByTagName("nav"))[0];
 const hide = document.getElementById("hide_menu_wrap");
 
-header.addEventListener("mouseenter", (e) => {
+nav.addEventListener("mouseenter", (e) => {
   hide.style.display = "flex";
   console.log("올렸다.");
 });
 
-header.addEventListener("mouseleave", (e) => {
+nav.addEventListener("mouseleave", (e) => {
   hide.style.display = "none";
   console.log("내렸다");
 });
