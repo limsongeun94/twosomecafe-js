@@ -17,29 +17,6 @@
     ></script>
     <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
     <script type="text/javascript" src="js/slide.js"></script>
-    <script type="text/javascript" src="js/jquery-scrollbar.js"></script>
-    <script>
-      
-      $(window).scroll(function () {
-        var offset = $("#mission").offset().top;
-        var scrT = $(window).scrollTop();
-        if (scrT >= offset - 500) {
-          $(".mission_img").addClass("ani");
-        } else {
-          $(".mission_img").removeClass("ani");
-        }
-      });
-
-      function goTo(to) {
-        if (to == "info") {
-          location.href = "./html/franchise/information.html";
-        } else if (to == "consult") {
-          location.href = "./html/franchise/consultation.html";
-        } else if (to == "faq") {
-          location.href = "./html/franchise/faq.html";
-        }
-      }
-    </script>
   </head>
 
   <body>
@@ -291,9 +268,9 @@
     <!-- 비디오 -->
     <!-- 비디오 -->
 
-    <!-- 서포트 / 호버 -->
-    <!-- 서포트 / 호버 -->
-    <!-- 서포트 / 호버 -->
+    <!-- 서포트 / 레이어 / 호버 -->
+    <!-- 서포트 / 레이어 / 호버 -->
+    <!-- 서포트 / 레이어 / 호버 -->
     <section class="support">
       <h1 class="section_title">SUPPROT</h1>
       <div class="support_img_wrap">
@@ -350,9 +327,9 @@
         </div>
       </div>
     </section>
-    <!-- 서포트 / 호버 -->
-    <!-- 서포트 / 호버 -->
-    <!-- 서포트 / 호버 -->
+    <!-- 서포트 / 레이어 / 호버 -->
+    <!-- 서포트 / 레이어 / 호버 -->
+    <!-- 서포트 / 레이어 / 호버 -->
 
     <!-- 프랜차이즈 / 이동 -->
     <!-- 프랜차이즈 / 이동 -->
@@ -417,7 +394,7 @@
       </div>
       <div class="space_design_explain">
         <p>사진에 마우스를 올려보세요.</p>
-        <p>더 큰 화면과 설명을 보실 수 있습니다.</p>
+        <p>더 큰 사진과 설명을 보실 수 있습니다.</p>
       </div>
       <div class="space_design_info">
         <table class="type_info" id="type_a_info">
@@ -719,7 +696,19 @@
       </div>
     </footer>
   </body>
+  <script>
+    function goTo(to) {
+        if (to == "info") {
+          location.href = "./html/franchise/information.html";
+        } else if (to == "consult") {
+          location.href = "./html/franchise/consultation.html";
+        } else if (to == "faq") {
+          location.href = "./html/franchise/faq.html";
+        }
+      }
+  </script>
   <script type="text/javascript" src="js/common.js"></script>
   <script type="text/javascript" src="js/big_slide.js"></script>
-  <script type="text/javascript" src="js/tab.js"></script>
+  <script type="text/javascript" src="js/space_design_flex.js"></script>
+  <script type="text/javascript" src="js/mission_scroll.js"></script>
 </html>
