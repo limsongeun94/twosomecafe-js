@@ -4,70 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>투썸플레이스 - A Towsome Place</title>
-    <link rel="stylesheet" type="text/css" href="../../css/brand/brand.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/brand/brand copy.css" />
     <link rel="stylesheet" type="text/css" href="../../css/common.css" />
     <link
       rel="icon"
       href="../../img/fixed/favicon/bi_img_logo.ico"
       sizes="32x32"
     />
-    <!-- <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css"
-    /> -->
-
-    <!-- <script
-      type="text/javascript"
-      src="http://code.jquery.com/jquery-latest.js"
-    ></script> -->
-    <!-- <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script> -->
-    <!-- <script type="text/javascript" src="js/jquery-scrollbar.js"></script> -->
-    <script type="text/javascript">
-      $(function () {
-        let vidElement = $("#bgvid");
-        let vid = $("#bgvid").get(0);
-        let pauseButton = $("#play");
-        let playing = true;
-
-        pauseButton.on("click", function () {
-          if (playing) {
-            vid.pause();
-            playing = false;
-            pauseButton.text("▶");
-            vidElement.fadeTo(300, 0.5);
-          } else {
-            vid.play();
-            playing = true;
-            pauseButton.text("■");
-            vidElement.fadeTo(300, 1);
-          }
-          vid.classList.toggle("play");
-        });
-      });
-
-      // $(function () {
-      //   let pos1 = $("#video_anchor").offset().top;
-      //   let pos2 = $("#blend_anchor").offset().top;
-      //   let pos3 = $("#history_anchor").offset().top;
-      //   let start = -500;
-
-      //   $(window).scroll(function () {
-      //     let scrT = $(window).scrollTop();
-      //     if (scrT >= pos1 + start && scrT < pos2 + start) {
-      //       $(".finder").find("a").removeClass("on");
-      //       $(".finder").find("a").eq(0).addClass("on");
-      //     }
-      //     if (scrT >= pos2 + start && scrT < pos3 + start) {
-      //       $(".finder").find("a").removeClass("on");
-      //       $(".finder").find("a").eq(1).addClass("on");
-      //     }
-      //     if (scrT >= pos3 + start) {
-      //       $(".finder").find("a").removeClass("on");
-      //       $(".finder").find("a").eq(2).addClass("on");
-      //     }
-      //   });
-      // });
-    </script>
   </head>
   <body>
     <!-- 네브바 -->
@@ -118,19 +61,20 @@
     <!-- 네브바 -->
     <!-- 네브바 -->
 
-    <section class="container">
-      <div id="video_anchor" class="anchor"></div>
-      <div class="video-wrapper">
-        <video
+    <!-- 비디오 -->
+    <!-- 비디오 -->
+    <!-- 비디오 -->
+    <section class="video">
+      <video
           id="bgvid"
-          class="play"
           src="../../video/epic_coffee_broll.mp4"
           autoplay
           loop
           muted
           type="video/mp4"
+          value="playing"
         ></video>
-        <div id="dv">
+        <div class="vdex">
           <h1>
             <img
               src="../../img/brand/bi_img_text.png"
@@ -159,86 +103,16 @@
             어울리는 색다른 디저트까지<br />
             바로 투썸 커피만의 작은 사치입니다.
           </p>
-          <button id="play">■</button>
+          <button id="play_stop" onclick="pnVideo()">■</button>
         </div>
-      </div>
     </section>
+    <!-- 비디오 -->
+    <!-- 비디오 -->
+    <!-- 비디오 -->
 
-    <section class="container">
-      <div id="blend_anchor" class="anchor"></div>
-      <div class="blend">
-        <div class="blend_text">
-          <h1>투썸플레이스의 특별한 블렌드</h1>
-          <p style="padding-top: 16px">
-            투썸플레이스 큐그레이더(Q-Grader)는 좋은 산지의 신선한<br />
-            원두만을 선별해 각각 다른 개성의 세가지 블렌드를 제공합니다.<br />
-            원두 타입별 최적의 밸런스를 맞춘 로스팅 포인트, 최상의<br />
-            에스프레소 추출 기술이 더해져 투썸플레이스만의 커피가 완성됩니다.
-          </p>
-        </div>
-        <div class="blend_img">
-          <img src="../../img/brand/aromanote.png" />
-          <img src="../../img/brand/blackground.png" />
-          <img src="../../img/brand/decaffe.png" />
-        </div>
-      </div>
-    </section>
-
-    <section class="container">
-      <div id="history_anchor" class="anchor"></div>
-      <div class="history">
-        <div class="history_text">
-          <h1>투썸플레이스가 걸어온 길</h1>
-          <table>
-            <tr>
-              <td>2002</td>
-              <td>투썸플레이스 1호점 신촌점 오픈</td>
-            </tr>
-            <tr>
-              <td>2008</td>
-              <td>프랜차이즈 사업 시작. 가맹 1호점 신사점 오픈.</td>
-            </tr>
-            <tr>
-              <td>2010</td>
-              <td>100호점 오픈</td>
-            </tr>
-            <tr>
-              <td>2012</td>
-              <td>200호점 오픈</td>
-            </tr>
-            <tr>
-              <td>2013</td>
-              <td>400호점 오픈</td>
-            </tr>
-            <tr>
-              <td>2014</td>
-              <td>업계 최초 '원두 이원화 서비스' 실시. 500호점 오픈.</td>
-            </tr>
-            <tr>
-              <td>2015</td>
-              <td>로스팅 플랜트 준공</td>
-            </tr>
-            <tr>
-              <td>2016</td>
-              <td>700호점 오픈. Drive-Thru 1호점 오픈</td>
-            </tr>
-            <tr>
-              <td>2018</td>
-              <td>1000호점 오픈</td>
-            </tr>
-            <tr>
-              <td>2019</td>
-              <td>
-                원두 이원화 서비스 브랜드 리뉴얼 (블랙그라운드, 아로마노트)
-              </td>
-            </tr>
-            <tr>
-              <td>2020</td>
-              <td>홈카페 대표브랜드 '에이리스트' 론칭</td>
-            </tr>
-          </table>
-        </div>
-      </div>
+    <section id="history">
+      <div id="year_container"></div>
+      <div id="event_container"></div>
     </section>
 
     <!-- 모달 -->
@@ -335,4 +209,5 @@
     <!-- 푸터 -->
   </body>
   <script type="text/javascript" src="../../js/common.js"></script>
+  <script type="text/javascript" src="../../js/video.js"></script>
 </html>

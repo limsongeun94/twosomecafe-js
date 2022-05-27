@@ -1,7 +1,12 @@
 window.addEventListener("scroll", () => {
   let mission = document.getElementById("mission");
+
+  //mission의 y축 절대좌표
   let missionT = window.pageYOffset + mission.getBoundingClientRect().top;
+
+  // 내가 있는 스크롤의 y축 좌표
   let scrT = window.pageYOffset;
+
   let m_img = document.getElementsByClassName("mission_img");
   if (scrT >= missionT - 500) {
     for (i = 0; i < m_img.length; i++) {
