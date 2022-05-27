@@ -558,27 +558,29 @@ button {
 /* 이벤트 배너 부분 */
 
 /* sns 부분 */
-.sns_container {
+#sns_container {
   margin: 0 auto;
-  padding: 0 1.042% 100px 1.042%;
-  width: 75%;
+  margin-bottom: 100px;
+  width: 1400px;
+  box-sizing: border-box;
   line-height: 0;
   text-align: center;
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.sns_img_wrap {
-  overflow: hidden;
+.sns_img_link {
   width: 280px;
   height: 280px;
-  display: inline-block;
+  display: block;
+  overflow: hidden;
 }
 
-.sns_img_wrap img {
-  width: 100%;
-  transition: transform 0.5s ease;
+.sns_img {
+  width: 280px;
 }
 
-.sns_img_wrap img:hover {
+.sns_img:hover {
   transform: scale(1.1);
 }
 /* sns 부분 */
