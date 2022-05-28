@@ -98,6 +98,8 @@ button {
 /* 대슬라이드 부분 */
 
 /* 베스트메뉴 소슬라이드 부분 */
+/* 베스트메뉴 소슬라이드 부분 */
+/* 베스트메뉴 소슬라이드 부분 */
 .bx-wrapper {
   height: 340px !important;
   margin: 0 auto;
@@ -105,20 +107,13 @@ button {
   box-shadow: none !important;
 }
 
-.best_menu_wrap {
-  margin: 0 auto 30px;
+#best_menu_wrap {
+  margin: 0 auto;
   width: 75%;
   line-height: 0;
 }
-
-.best_menu_wrap img {
-  width: 100%;
-  height: 320px;
-}
-.best_menu_wrap .text {
-  line-height: 24px;
-  text-align: center;
-}
+/* 베스트메뉴 소슬라이드 부분 */
+/* 베스트메뉴 소슬라이드 부분 */
 /* 베스트메뉴 소슬라이드 부분 */
 
 /* 메뉴 부분 */
