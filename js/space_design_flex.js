@@ -20,7 +20,8 @@ imgWrap.addEventListener("mouseleave", () => {
 
 const Acontainer = Array.from(
   document.getElementsByClassName("space_design_img type_a_img")
-)[0];
+)[0]
+
 const Bcontainer = Array.from(
   document.getElementsByClassName("space_design_img type_b_img")
 )[0];
@@ -57,7 +58,7 @@ Ccontainer.addEventListener("mouseenter", () => {
   Dinfo.style.display = "none";
 });
 
-Ccontainer.addEventListener("mouseenter", () => {
+Dcontainer.addEventListener("mouseenter", () => {
   Ainfo.style.display = "none";
   Binfo.style.display = "none";
   Cinfo.style.display = "none";

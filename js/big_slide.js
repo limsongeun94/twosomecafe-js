@@ -62,43 +62,29 @@ btn4.addEventListener("click", () => {
 
 function updateIndicator() {
   let bannerSRC = banner.getAttribute("src");
+  btn0.innerText = "○";
+  btn1.innerText = "○";
+  btn2.innerText = "○";
+  btn3.innerText = "○";
+  btn4.innerText = "○";
   switch (bannerSRC) {
     case "img/index/main_banner/paint.jpg":
       btn0.innerText = "●";
-      btn1.innerText = "○";
-      btn2.innerText = "○";
-      btn3.innerText = "○";
-      btn4.innerText = "○";
       break;
     case "img/index/main_banner/dessert.jpg":
-      btn0.innerText = "○";
       btn1.innerText = "●";
-      btn2.innerText = "○";
-      btn3.innerText = "○";
-      btn4.innerText = "○";
       break;
     case "img/index/main_banner/beverage.jpg":
-      btn0.innerText = "○";
-      btn1.innerText = "○";
       btn2.innerText = "●";
-      btn3.innerText = "○";
-      btn4.innerText = "○";
       break;
     case "img/index/main_banner/towsome_heart.jpg":
-      btn0.innerText = "○";
-      btn1.innerText = "○";
-      btn2.innerText = "○";
       btn3.innerText = "●";
-      btn4.innerText = "○";
       break;
     case "img/index/main_banner/cake.jpg":
-      btn0.innerText = "○";
-      btn1.innerText = "○";
-      btn2.innerText = "○";
-      btn3.innerText = "○";
       btn4.innerText = "●";
       break;
   }
 }
 
 setInterval(next_img, 3000);
+
