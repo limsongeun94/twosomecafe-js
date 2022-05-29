@@ -68,6 +68,7 @@ button {
   position: absolute;
   left: 20px;
   top: calc(50% - 30px);
+  cursor: pointer;
 }
 
 #btn_rignt {
@@ -75,6 +76,7 @@ button {
   position: absolute;
   right: 20px;
   top: calc(50% - 30px);
+  cursor: pointer;
 }
 
 .num_btn {
@@ -100,17 +102,61 @@ button {
 /* 베스트메뉴 소슬라이드 부분 */
 /* 베스트메뉴 소슬라이드 부분 */
 /* 베스트메뉴 소슬라이드 부분 */
-.bx-wrapper {
-  height: 340px !important;
-  margin: 0 auto;
-  border: none !important;
-  box-shadow: none !important;
+.best_menu {
+  position:relative
 }
 
 #best_menu_wrap {
   margin: 0 auto;
-  width: 75%;
-  line-height: 0;
+  margin-bottom: calc(100px + 50px);
+  width: 1400px;
+  overflow: hidden;
+}
+
+.best_item_container{
+  float: left;
+  margin:0 15px;
+}
+
+.best_item_img {
+  width: 320px;
+  display: block;
+}
+
+.best_item_text {
+  text-align:center;
+  padding-top:16px;
+}
+
+#bestLt{
+  position:absolute;
+  width: 50px;
+  top:calc(50% - 25px + 80px);
+  left:calc(251px - 50px);
+  cursor: pointer;
+}
+
+#bestRt{
+  position:absolute;
+  width: 50px;
+  top:calc(50% - 25px + 80px);
+  right:calc(251px - 50px);
+  cursor: pointer;
+}
+
+.best_btn {
+  display: flex;
+  width: 68px;
+  justify-content: space-between;
+  position: absolute;
+  left: calc(50% - 34px);
+  bottom: -50px;
+}
+
+#best_btn0,
+#best_btn1,
+#best_btn2 {
+  cursor: pointer;
 }
 /* 베스트메뉴 소슬라이드 부분 */
 /* 베스트메뉴 소슬라이드 부분 */
