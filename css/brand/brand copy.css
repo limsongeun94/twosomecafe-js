@@ -64,9 +64,24 @@ button {
 /* 비디오 부분 */
 
 /* 연혁 부분 */
-#history {
+.history {
   width: calc(100vw - (100vw - 100%));
   height: calc(100vh - 100px);
+  position:relative;
+}
+
+#year_container{
+  font-size: 48px;
+  position:absolute;
+  top:calc(50% - 24px);
+  left:251px;
+}
+
+#event_container{
+  font-size: 48px;
+  position:absolute;
+  top:calc(50% - 24px);
+  right:251px;
 }
 /* 연혁 부분 */
 
