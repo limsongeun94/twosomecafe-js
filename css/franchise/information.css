@@ -1,304 +1,193 @@
-*{
-    margin : 0;
-    padding : 0;
-    color : #645959;
+* {
+  margin: 0;
+  padding: 0;
+  color: #645959;
 }
 
 body {
-    min-width: 1440px;
+  min-width: 1440px;
 }
 
-a{
-    text-decoration: none;
+a {
+  text-decoration: none;
 }
 
-ul li{
-    list-style-type: none;
-    display: inline-block;
+ul li {
+  list-style-type: none;
+  display: inline-block;
 }
 
-/* GNB 부분 */
-header{
-    width: 100%;
-    box-sizing: border-box;
-    background-color: #fff;
-    /* position: sticky; */
-    position: fixed;
-    left:0; top:0px;
-    z-index: 1000;
-    box-shadow: 0 4px 12px rgba(64, 59, 59, 0.3);
+.sub_visual {
+  background: url("../../img/fixed/suv_visual/coffee-maker-machine-making-espresso-shot.jpg")
+    no-repeat bottom;
+  background-size: 1920px auto;
 }
 
-.header_inner{
-    width: 1400px;
-    height: 100%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
+.sub_visual :is(h1, p, ul) {
+  text-align: center;
+  color: #ececee;
 }
 
-.header_logo{
-    height: 120px;
-    display: flex;
-    align-items: center;
+.sub_visual h1 {
+  padding: 100px 0 30px 0;
 }
 
-.header_actions{
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    min-height: 120px;
-    width: 900px;
+.sub_visual ul {
+  padding: 30px 0 100px 0;
 }
 
-.header_actions_top{
-    margin-top: 27px;
-    display: flex;
-    justify-content: flex-end;
-}
-.header_actions_top > *{
-    margin-left: 16px;
-}
-
-.header_actions_bottom{
-    margin-top: 16px;
-    display: flex;
-    justify-content: space-between;
-    position: relative;
-    bottom: 0;
-    padding-bottom: 32px;
-    color: #645959;
+.sub_visual ul li a {
+  border: 1px solid #ececee;
+  width: 180px;
+  line-height: 38px;
+  text-align: center;
+  text-decoration: none;
+  color: #ececee;
+  background-color: rgba(64, 59, 59, 0.6);
+  display: block;
 }
 
-.header_actions_bottom > .main_menu{
-    position: relative;
+.sub_visual ul li a:hover {
+  color: #645959;
+  background-color: #ececee;
 }
 
-.main_menu_label{
-    position: relative;
-    cursor: pointer;
-    font-weight: bold;
+.sub_visual ul li:first-child a {
+  color: #645959;
+  background-color: #ececee;
 }
 
-.main_menu_label::before{
-    position:absolute;
-    width:100%;
-    height: 5px;
-    top: 100%;
-    left: 0;
-    content: "";
-    border-bottom: 5px solid transparent;
-    transition: border-bottom-color;
-    transition-duration: 0.5s;
+.own_store,
+.conditions,
+.procedure,
+.investment_expenses {
+  margin: 0 auto;
+  margin-top: 100px;
+  width: 1400px;
 }
 
-.main_menu:hover .main_menu_label::before{
-    border-bottom-color: #645959;
+:is(.own_store, .conditions, .investment_expenses) table {
+  margin-top: 30px;
+  border-collapse: collapse;
+  width: 100%;
 }
 
-.header_actions_bottom:hover .sub_menu{
-    height: 200px;
+:is(.own_store, .conditions) :is(th, td) {
+  padding: 25px;
+  border-bottom: 1px solid #ececee;
 }
 
-.sub_menu{
-    overflow: hidden;
-    height: 0;
-    transition-duration: 0.2s;
-    transition-property: height;
+:is(.own_store, .conditions) tr:first-child :is(th, td) {
+  border-top: 1px solid #ececee;
 }
 
-.sub_menu_item:first-child{
-    margin-top: 32px;
-}
-.sub_menu_item{
-    margin-top: 8px;
-    cursor: pointer;
-}
-.sub_menu_item:hover{
-    font-weight: bold;
+:is(.own_store, .conditions) table th {
+  width: 200px;
+  background-color: #f8f8f8;
 }
 
-.hamberger_menu {
-    display: none;
+.procedure_wrap > div {
+  margin-top: 25px;
+  border: 1px solid #ececee;
+  padding: 50px;
+  width: 450px;
+  height: 300px;
+  vertical-align: bottom;
+  box-sizing: border-box;
 }
 
-.for_height{
-    height: 120px;
-}
-/* GNB 부분 */
-
-
-.sub_visual{
-    background: url("../../img/fixed/suv_visual/coffee-maker-machine-making-espresso-shot.jpg") no-repeat bottom;
-    background-size: 1920px auto;
+.procedure_wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
-.sub_visual :is(h1, p, ul){
-    text-align: center;
-    color: #ececee;
+.procedure_wrap > div > p:nth-child(1) {
+  color: #c80029;
+  font-weight: bold;
 }
 
-.sub_visual h1{
-    padding: 100px 0 30px 0;
+.procedure_wrap > div > p:nth-child(2) {
+  padding: 10px 0;
+  font-size: 24px;
+  font-weight: bold;
 }
 
-.sub_visual ul{
-    padding: 30px 0 100px 0;
+caption {
+  width: 0;
+  height: 0;
+  font-size: 0;
+  line-height: 0;
+  text-indent: -9990em;
 }
 
-.sub_visual ul li a{
-    border: 1px solid #ececee;
-    width : 180px;
-    line-height: 38px;
-    text-align: center;
-    text-decoration: none;
-    color: #ececee;
-    background-color: rgba(64, 59, 59, 0.6);
-    display: block;
+.investment_expenses {
+  margin-bottom: 100px;
 }
 
-.sub_visual ul li a:hover{
-    color: #645959;
-    background-color: #ececee;
+.investment_expenses :is(th, td) {
+  padding: 25px;
 }
 
-.sub_visual ul li:first-child a{
-    color: #645959;
-    background-color: #ececee;
+.investment_expenses thead th {
+  border-top: 1px solid #645959;
+  border-bottom: 1px solid #645959;
 }
 
-.own_store, .conditions, .procedure, .investment_expenses{
-    margin : 0 auto;
-    margin-top: 100px;
-    width: 1400px;
+.investment_expenses :is(tbody, tfoot) :is(th, td) {
+  border-bottom: 1px solid #ececee;
 }
 
-:is(.own_store, .conditions, .investment_expenses) table{
-    margin-top: 30px;
-    border-collapse: collapse;
-    width: 100%;
+.investment_expenses tbody th {
+  text-align: left;
 }
 
-:is(.own_store, .conditions) :is(th,td){
-    padding : 25px;
-    border-bottom: 1px solid #ececee;
+.investment_expenses tfoot :is(th, td) {
+  background-color: #f8f8f8;
+  font-weight: bold;
 }
 
-:is(.own_store, .conditions) tr:first-child :is(th,td){
-    border-top: 1px solid #ececee;
+.investment_expenses table :is(tfoot, tbody) td:last-child {
+  text-align: right;
 }
 
-:is(.own_store, .conditions) table th{
-    width: 200px;
-    background-color: #f8f8f8;
+footer {
+  padding: 3% 13.541%;
+  height: 360px;
+  box-sizing: border-box;
+  background-color: #645959;
 }
 
-.procedure > div{
-    margin-top: 25px;
-    border : 1px solid #ececee;
-    padding : 50px;
-    width: 450px;
-    height: 300px;
-    vertical-align: bottom;
-    display: inline-block;
-    box-sizing: border-box;
+footer ul {
+  text-align: center;
 }
 
-.procedure > div:nth-of-type(n+1):nth-of-type(-n+3){
-    margin-top: 30px;
+footer ul li {
+  margin: 20px;
 }
 
-.procedure > div:nth-of-type(3n+2){
-    margin: 0 25px;
+footer ul li a {
+  color: #ececee;
+  font-weight: bold;
 }
 
-.procedure > div > p:nth-child(1){
-    color: #c80029;
-    font-weight: bold;
+footer hr {
+  margin: 0 auto;
 }
 
-.procedure > div > p:nth-child(2){
-    padding : 10px 0;
-    font-size: 24px;
-    font-weight: bold;
+footer p {
+  margin: 20px 0;
+  font-size: 12px;
+  color: #ececee;
 }
 
-caption{
-    width: 0;
-    height: 0;
-    font-size: 0;
-    line-height: 0;
-    text-indent: -9990em;
+footer div:last-child a {
+  margin: 20px 10px;
+  display: inline-block;
 }
 
-.investment_expenses{
-    margin-bottom: 100px;
-}
-
-.investment_expenses :is(th,td){
-    padding : 25px;
-}
-
-.investment_expenses thead th{
-    border-top: 1px solid #645959;
-    border-bottom: 1px solid #645959;
-}
-
-.investment_expenses :is(tbody, tfoot) :is(th, td){
-    border-bottom: 1px solid #ececee;
-}
-
-.investment_expenses tbody th{
-    text-align: left;
-}
-
-.investment_expenses tfoot :is(th, td){
-    background-color: #f8f8f8;
-    font-weight: bold;
-}
-
-.investment_expenses table :is(tfoot, tbody) td:last-child{
-    text-align: right;
-}
-
-footer{
-    padding : 3% 13.541%;
-    height: 360px;
-    box-sizing: border-box;
-    background-color: #645959;
-}
-
-footer ul{
-    text-align: center;
-}
-
-footer ul li{
-    margin : 20px;
-}
-
-footer ul li a{
-    color: #ececee;
-    font-weight: bold;
-}
-
-footer hr{
-    margin: 0 auto;
-}
-
-footer p{
-    margin : 20px 0;
-    font-size: 12px;
-    color: #ececee;
-}
-
-footer div:last-child a{
-    margin : 20px 10px;
-    display: inline-block;
-}
-
-footer div:last-child a img{
-    border : 2px solid #ececee;
-    border-radius: 50%;
-    padding : 5px;
+footer div:last-child a img {
+  border: 2px solid #ececee;
+  border-radius: 50%;
+  padding: 5px;
 }

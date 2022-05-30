@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <title>투썸플레이스 - A Towsome Place</title>
     <link rel="stylesheet" type="text/css" href="../../css/franchise/faq.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/common.css" />
     <link
       rel="icon"
       href="../../img/fixed/favicon/bi_img_logo.ico"
@@ -11,53 +12,53 @@
     />
   </head>
   <body>
-    <header style="z-index: 5000">
+    <!-- 네브바 -->
+    <!-- 네브바 -->
+    <!-- 네브바 -->
+    <header>
       <nav>
-        <h1 class="twosome_logo_text">
-          <a href="../../html/index/index.html"
-            ><img
-              src="../../img/fixed/navigation/bi_img_text.png"
-              alt="text BI"
-          /></a>
-        </h1>
-        <ul class="nav_top">
-          <li>
-            <a>
-              <img
-                src="../../img/fixed/navigation/2849831_account_avatar_person_profile_multimedia_icon.png"
-                alt="account"
-                width="24px"
-              />
-            </a>
-          </li>
-          <li>
-            <a>
-              <img
-                src="../../img/fixed/navigation/2849824_store_shopping_market_buy_shop_icon.png"
-                alt="shopping"
-                width="24px"
-              />
-            </a>
-          </li>
-          <li>
-            <a href="../map/map.html">
-              <img
-                src="../../img/fixed/navigation/2849828_pointer_map_location_place_multimedia_icon.png"
-                alt="map"
-                width="24px"
-              />
-            </a>
-          </li>
-        </ul>
-        <ul class="nav_bottom">
-          <li><a href="#">브랜드</a></li>
-          <li><a href="../menu/coffee_beverage.html">메뉴</a></li>
-          <li><a href="../app_membership/app.html">앱 & 멤버십</a></li>
-          <li><a href="../franchise/information.html">창업안내</a></li>
-          <li><a href="../../html/event/event.html">이벤트</a></li>
-        </ul>
+        <img
+          src="../../img/fixed/navigation/bi_img_text.png"
+          width="259px"
+          height="36px"
+        />
+        <div class="show_menu_wrap">
+          <div class="show_menu">브랜드</div>
+          <div class="show_menu">메뉴</div>
+          <div class="show_menu">앱 멤버십</div>
+          <div class="show_menu">창업안내</div>
+          <div class="show_menu">이벤트</div>
+        </div>
+        <div id="hide_menu_wrap">
+          <div class="hide_menu">
+            <div>투썸플레이스</div>
+          </div>
+          <div class="hide_menu">
+            <div>커피 & 음료</div>
+            <div>아이스크림</div>
+            <div>케이크</div>
+            <div>델리</div>
+            <div>빵</div>
+            <div>md</div>
+          </div>
+          <div class="hide_menu">
+            <div>앱</div>
+            <div>멤버십</div>
+          </div>
+          <div class="hide_menu">
+            <div>창업안내</div>
+            <div>상담신청</div>
+            <div>FAQ</div>
+          </div>
+          <div class="hide_menu">
+            <div>이벤트</div>
+          </div>
+        </div>
       </nav>
     </header>
+    <!-- 네브바 -->
+    <!-- 네브바 -->
+    <!-- 네브바 -->
 
     <section class="sub_visual">
       <h1>FAQ</h1>
@@ -138,65 +139,102 @@
       </details>
     </section>
 
+    <!-- 모달 -->
+    <!-- 모달 -->
+    <!-- 모달 -->
+    <div id="email_modal" class="modal_overlay" >
+      <div class="modal-dimm" onclick = "closeModal('email_modal')"></div>
+      <div class="modal">
+        <p id="email_modal_title" class="modal_title"></p>
+        <img class="modal_close" onclick = "closeModal('email_modal')" src="../../img/fixed/modal/293657_x_icon.png" width="24px"></img>
+        <p id="email_modal_content" class="modal_content"></p>
+      </div>
+    </div>
+
+    <div id="legal_modal" class="modal_overlay" >
+      <div class="modal-dimm" onclick = "closeModal('legal_modal')"></div>
+      <div class="modal">
+        <p id="legal_modal_title" class="modal_title"></p>
+        <img class="modal_close"  onclick = "closeModal('legal_modal')" src="../../img/fixed/modal/293657_x_icon.png" width="24px"></img>
+        <p id="legal_modal_content" class="modal_content"></p>
+      </div>
+    </div>
+    <!-- 모달 -->
+    <!-- 모달 -->
+    <!-- 모달 -->
+    
+    <!-- 푸터 -->
+    <!-- 푸터 -->
+    <!-- 푸터 -->
     <footer>
       <ul>
         <li>
-          <a href="../footer/terms_of_service.html">이용약관</a>
+          <a href="html/footer/terms_of_service.html">이용약관</a>
         </li>
         <li>
-          <a href="../footer/privacy_policy.html">개인정보처리방침</a>
+          <a href="html/footer/privacy_policy.html">개인정보처리방침</a>
         </li>
         <li>
-          <a href="../footer/location_based_service.html"
+          <a href="html/footer/location_based_service.html"
             >위치기반서비스 이용약관</a
           >
         </li>
         <li>
-          <a>이메일 무단수집거부</a>
+          <a onclick="setModal('email_modal')" style="cursor: pointer"
+            >이메일 무단수집거부</a
+          >
         </li>
         <li>
-          <a>법적고지</a>
+          <a onclick="setModal('legal_modal')" style="cursor: pointer"
+            >법적고지</a
+          >
         </li>
       </ul>
       <hr />
-      <div style="float: left">
-        <p>
-          주소 : 서울특별시 중구 을지로 170, 8층(을지로4가,
-          을지트윈타워)투썸플레이스(주)
-        </p>
-        <p>고객센터 : 1577-4410 | 팩스 : 02-2058-6777</p>
-        <p>
-          대표이사 : 이영상 | 개인정보보호책임자 : 장재호 | 사업자등록번호 :
-          404-86-01054 <br />
-          통신판매업종신고증 : 제 2018-서울중구-0353호 | 대표이메일 :
-          helpmaster@twosome.co.kr
-        </p>
-        <p>Copyright ⓒ 2021 A TWOSOME PLACE Co., LTD. All Rights Reserved.</p>
-      </div>
-      <div style="float: right">
-        <a
-          href="https://www.facebook.com/ATWOSOMEPLACE/"
-          target="_blank"
-          title="facebook"
-          ><img
-            src="../../img/fixed/footer/book_face_facebook_fb_icon.png"
-            width="30px" /></a
-        ><a
-          href="https://www.instagram.com/official_atwosomeplace/?igshid=1vu3rl2z5ps7n"
-          target="_blank"
-          title="instagram"
-          ><img
-            src="../../img/fixed/footer/ig_instagram_photo_icon.png"
-            width="30px" /></a
-        ><a
-          href="https://www.youtube.com/channel/UCDjdk0ufvcvV08hAm_vF06Q"
-          target="_blank"
-          title="youtube"
-          ><img
-            src="../../img/fixed/footer/play_video_youtube_youtuber_icon.png"
-            width="30px"
-        /></a>
+      <div style="display: flex; justify-content: space-between">
+        <div>
+          <p>
+            주소 : 서울특별시 중구 을지로 170, 8층(을지로4가,
+            을지트윈타워)투썸플레이스(주)
+          </p>
+          <p>고객센터 : 1577-4410 | 팩스 : 02-2058-6777</p>
+          <p>
+            대표이사 : 이영상 | 개인정보보호책임자 : 장재호 | 사업자등록번호 :
+            404-86-01054 <br />
+            통신판매업종신고증 : 제 2018-서울중구-0353호 | 대표이메일 :
+            helpmaster@twosome.co.kr
+          </p>
+          <p>Copyright ⓒ 2021 A TWOSOME PLACE Co., LTD. All Rights Reserved.</p>
+        </div>
+        <div class="sns_wrap">
+          <a
+            href="https://www.facebook.com/ATWOSOMEPLACE/"
+            target="_blank"
+            title="facebook"
+            ><img
+              src="../../img/fixed/footer/book_face_facebook_fb_icon.png"
+              width="30px" /></a
+          ><a
+            href="https://www.instagram.com/official_atwosomeplace/?igshid=1vu3rl2z5ps7n"
+            target="_blank"
+            title="instagram"
+            ><img
+              src="../../img/fixed/footer/ig_instagram_photo_icon.png"
+              width="30px" /></a
+          ><a
+            href="https://www.youtube.com/channel/UCDjdk0ufvcvV08hAm_vF06Q"
+            target="_blank"
+            title="youtube"
+            ><img
+              src="../../img/fixed/footer/play_video_youtube_youtuber_icon.png"
+              width="30px"
+          /></a>
+        </div>
       </div>
     </footer>
+    <!-- 푸터 -->
+    <!-- 푸터 -->
+    <!-- 푸터 -->
   </body>
+  <script type="text/javascript" src="../../js/common.js"></script>
 </html>
