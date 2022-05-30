@@ -46,21 +46,26 @@ function renderArr(arr) {
   let title_container = document.getElementById("app_guid_title");
   let explain_container = document.getElementById("app_guid_explain");
 
-  title_container.innerText = arr[1].title;
-  explain_container.innerHTML = arr[1].guide;
+  title_container.innerText = arr[0].title;
+  explain_container.innerHTML = arr[0].guide;
 }
 
 const leftBtn = document.getElementById("btnLt");
 const rightBtn = document.getElementById("btnRt");
 
-leftBtn.addEventListener("click", () => extractFromArray(-1));
-rightBtn.addEventListener("click", () => extractFromArray(1));
+leftBtn.addEventListener("click", () => moveAppGuide(-1));
+rightBtn.addEventListener("click", () => moveAppGuide(1));
 
 function moveAppGuide(x) {
-  if (x < 1) {
+  if (x < 0) {
     appArr = appArr.slice(-1).concat(appArr.slice(0, 5));
-  } else if (x > 1) {
-    appArr = appArr.slice(1).concat(appArr(0, 1));
+  } else if (x > 0) {
+    // 요것만 수정하면 ㄷ
+    appArr = appArr.slice(1).concat(appArr.slice(0, 1));
   }
+  console.log("hihi");
   renderArr(appArr);
 }
+
+// 텍스트랑 사진이랑도 안 맞고
+// 외 오른쪽 버튼이 안 듣지...?
