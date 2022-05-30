@@ -130,7 +130,7 @@ button img {
   z-index: -1;
 }
 
-.mockup_img_wrap {
+#mockup_img_wrap {
   margin: 0 auto;
   padding-top: 30px;
   width: 1400px;
@@ -140,11 +140,11 @@ button img {
   align-items: flex-end;
 }
 
-.mockup_img_wrap img {
+#mockup_img_wrap img {
   width: 190px;
 }
 
-.mockup_img_wrap img:first-child {
+#mockup_img_wrap img:first-child {
   width: 300px;
 }
 
