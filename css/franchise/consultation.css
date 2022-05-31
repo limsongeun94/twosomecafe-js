@@ -127,9 +127,9 @@ td {
 .tel_no_a,
 .tel_no_b,
 #call_time,
-#zip,
-#adress_main,
-#adress_ect,
+.zip,
+.adress_main,
+.adress_ect,
 #shop_name,
 #hope_location {
   border: 1px solid #645959;
@@ -142,12 +142,12 @@ td {
 
 .email,
 .tel_no_a,
-#zip {
+.zip {
   width: 200px;
 }
 
-#adress_main,
-#adress_ect {
+.adress_main,
+.adress_ect {
   width: 400px;
 }
 

@@ -217,14 +217,14 @@
             <td>
               <div style="display: flex; flex-direction: column">
                 <div style="display: flex">
-                  <input type="text" id="zip" placeholder="우편번호" />
-                  <button class="color_button">우편번호 검색</button>
+                  <input type="text" id="sample6_postcode" class="zip" placeholder="우편번호" />
+                  <button onclick="sample6_execDaumPostcode()" class="color_button">우편번호 검색</button>
                 </div>
                 <div style="margin-top: 10px; display: flex">
-                  <input type="text" id="adress_main" placeholder="주소" />
+                  <input type="text" id="sample6_address" class="adress_main" placeholder="주소" />
                   <input
-                    type="text"
-                    id="adress_ect"
+                    type="text" id="sample6_detailAddress"
+                    class="adress_ect"
                     placeholder="나머지 주소 입력"
                     style="margin-left: 10px"
                   />
@@ -235,14 +235,18 @@
           <tr>
             <th>평형<span> *</span></th>
             <td>
-              <div class="custom_input" id="pyeong_wrap">
-                <input
-                  type="text"
-                  id="pyeong"
-                  onfocus="onFocus(event)"
-                  onfocusout="onFocusOut(event)"
-                />
-                <span class="pyeong_text">평형</span>
+              <div class="hint_wrap">
+                <div class="custom_input" id="pyeong_wrap">
+                  <input
+                    type="text"
+                    id="pyeong"
+                    onfocus="onFocus(event)"
+                    onfocusout="onFocusOut(event)"
+                    oninput="handlePyoungInput(event)"
+                  />
+                  <span class="input-error">* 세자리 숫자만 입력하세요.</span>
+                  <span class="pyeong_text">평형</span>
+                </div>
               </div>
             </td>
           </tr>
@@ -379,4 +383,6 @@
   </script>
   <script type="text/javascript" src="../../js/common.js"></script>
   <script type="text/javascript" src="../../js/consultation.js"></script>
+  <script type="text/javascript" src="../../js/adress.js"></script>
+  <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 </html>

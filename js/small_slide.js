@@ -65,6 +65,8 @@ function smallBtnCreateBestArr(x) {
       console.log("hey~ its error~");
   }
   renderArr(bestArr.slice(leftCursor, rightCursor));
+
+  runAutoSlide();
 }
 
 function renderArr(arr) {
@@ -85,7 +87,38 @@ const btnRt = document.getElementById("bestRt");
 let leftCursor = 0;
 let rightCursor = 4;
 
-btnLt.addEventListener("click", () => {
+// 인터벌의 고유 아이디
+// 초기값: undefined
+let intervalId;
+
+// 이게 인터벌을 초기화하는 로직이야.
+const runAutoSlide = () => {
+  // 인터벌 아이디가 존재하는 경우 인터벌 정지
+  if (intervalId) {
+    clearInterval(intervalId);
+  }
+  // 인터벌 아이디가 값이 없음 => 초기값이 없음 => 아직 실행한 인터벌이 없음 => 정지해야 할 인터벌이 없음
+  else {
+  }
+  // 다시 인터벌을 실행하며 인터벌 아이디를 할당
+  intervalId = setInterval(nextSlideHandler, 3000);
+};
+
+const nextSlideHandler = () => {
+  leftCursor += 4;
+  leftCursor = leftCursor % bestArr.length;
+  rightCursor += 4;
+  rightCursor =
+    rightCursor > bestArr.length ? rightCursor - bestArr.length : rightCursor;
+
+  renderArr(bestArr.slice(leftCursor, rightCursor));
+  smallBtnCreateBestArr(leftCursor / 4);
+
+  // 자동실행, 반복초기화
+  runAutoSlide();
+};
+
+const prevSlideHandler = () => {
   leftCursor -= 4;
   leftCursor = leftCursor < 0 ? leftCursor + bestArr.length : leftCursor;
   rightCursor -= 4;
@@ -95,16 +128,14 @@ btnLt.addEventListener("click", () => {
 
   renderArr(bestArr.slice(leftCursor, rightCursor));
   smallBtnCreateBestArr(leftCursor / 4);
-});
-btnRt.addEventListener("click", () => {
-  leftCursor += 4;
-  leftCursor = leftCursor % bestArr.length;
-  rightCursor += 4;
-  rightCursor =
-    rightCursor > bestArr.length ? rightCursor - bestArr.length : rightCursor;
 
-  renderArr(bestArr.slice(leftCursor, rightCursor));
-  smallBtnCreateBestArr(leftCursor / 4);
-});
+  // 자동실행, 반복초기화
+  runAutoSlide();
+};
+
+btnLt.addEventListener("click", prevSlideHandler);
+
+btnRt.addEventListener("click", nextSlideHandler);
 
 renderArr(bestArr.slice(leftCursor, rightCursor));
+runAutoSlide();
