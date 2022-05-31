@@ -255,7 +255,10 @@
           <tr>
             <th>희망지역<span> *</span></th>
             <td>
-              <input type="text" id="hope_location" />
+              <div class="hint_wrap">
+                <input type="text" id="hope_location" oninput="handleKrCompleteNumInput(event)" />
+                <span class="input-error">* 한글과 숫자만 입력하세요.</span>
+              </div>
             </td>
           </tr>
         </table>
