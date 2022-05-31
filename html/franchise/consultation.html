@@ -111,84 +111,56 @@
           <tr>
             <th>이름<span> *</span></th>
             <td>
-              <input type="text" id="name" />
+              <div class="hint_wrap">
+                <input id="krComplete-only" oninput="handleKrCompleteOnlyInput(event)" type="text" class="name" />
+                <span class="input-error">* 자모음을 합친 완성된 한글만 입력하세요</span>
+              </div>
             </td>
           </tr>
           <tr>
             <th>이메일<span> *</span></th>
             <td>
-              <div style="display: flex; align-items: center">
-                <input id="emailid" type="text" style="margin-right: 10px" />
-                @
+              <div class="hint_wrap" style="display: flex; align-items: center;">
+                <div>
+                  <input id="kr-only" oninput="handleEnNumInput(event)" class="email" type="text" style="margin-right: 10px" />
+                  <span class="input-error">* 영문과 숫자만 입력하세요.</span>
+                </div>
+                @              
                 <select id="emailaddr" style="margin-left: 10px">
                   <option value="">선택</option>
-                  <option data-data="01" value="01">gmail.com</option>
-                  <option data-data="02" value="02">naver.com</option>
-                  <option data-data="03" value="03">nate.com</option>
-                  <option data-data="04" value="04">kakao.com</option>
-                  <option data-data="05" value="05">hanmail.net</option>
-                  <option data-data="06" value="06">daum.net</option>
-                  <option data-data="99" value="direct">직접입력</option>
-                </select>
+                  <option value="01">gmail.com</option>
+                  <option value="02">naver.com</option>
+                  <option value="03">nate.com</option>
+                  <option value="04">kakao.com</option>
+                  <option value="05">hanmail.net</option>
+                  <option value="06">daum.net</option>
+                  <option value="direct">직접입력</option>
+                </select>                
               </div>
             </td>
           </tr>
           <tr>
             <th>연락처<span> *</span></th>
             <td>
-              <div style="display: flex; flex-direction: column">
+              <div class="hint_wrap" style="margin-top: 10px; display: flex">
+                <select class="tel_no_a" onchange="inNumber(event)" >
+                  <option value="010">010</option>
+                  <option value="011">011</option>
+                  <option value="016">016</option>
+                  <option value="017">017</option>
+                  <option value="018">018</option>
+                  <option value="019">019</option>
+                </select>
                 <div>
-                  <input type="radio" id="radio_01_1" name="radio_01" />
-                  <label for="radio_01_1">휴대폰번호</label>
                   <input
-                    type="radio"
-                    id="radio_01_2"
-                    name="radio_01"
-                    style="margin-left: 20px"
-                  />
-                  <label for="radio_01_2">일반전화번호</label>
-                </div>
-                <div style="margin-top: 10px; display: flex">
-                  <select name="tel_no_a" id="tel_no_a_1">
-                    <option value="010">010</option>
-                    <option value="011">011</option>
-                    <option value="016">016</option>
-                    <option value="017">017</option>
-                    <option value="018">018</option>
-                    <option value="019">019</option>
-                  </select>
-                  <select name="tel_no_a" id="tel_no_a_2" style="display: none">
-                    <option value="02">02</option>
-                    <option value="031">031</option>
-                    <option value="032">032</option>
-                    <option value="033">033</option>
-                    <option value="041">041</option>
-                    <option value="042">042</option>
-                    <option value="043">043</option>
-                    <option value="044">044</option>
-                    <option value="051">051</option>
-                    <option value="052">052</option>
-                    <option value="053">053</option>
-                    <option value="054">054</option>
-                    <option value="055">055</option>
-                    <option value="061">061</option>
-                    <option value="062">062</option>
-                    <option value="063">063</option>
-                    <option value="064">064</option>
-                  </select>
-                  <input
-                    id="tel_no_b"
-                    name="tel_no_a"
+                    class="tel_no_b"
                     type="tel"
                     maxlength="8"
                     style="margin-left: 10px"
-                    oninput="inNumber(event)"
+                    oninput="handlePhoneNumberInput(event)"
                   />
+                  <span class="input-error">* 여덟자리 숫자만 입력하세요.</span>
                 </div>
-                <p style="margin-top: 10px; font-size: 12px">
-                  휴대폰번호 또는 일반전화 중 연락 가능한 번호를 입력하여
-                  주세요.
-                </p>
               </div>
             </td>
           </tr>
@@ -403,4 +375,5 @@
     }
   </script>
   <script type="text/javascript" src="../../js/common.js"></script>
+  <script type="text/javascript" src="../../js/consultation.js"></script>
 </html>
