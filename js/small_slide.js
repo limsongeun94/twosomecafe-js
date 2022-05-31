@@ -34,6 +34,15 @@ let bestArr = [
   { img: "img/index/best_menu/piece_tiramisu.jpg", name: "떠먹는 티라미수" },
 ];
 
+let intervalId;
+const runAutoSlide = () => {
+  if (intervalId) {
+    clearInterval(intervalId);
+  } else {
+  }
+  intervalId = setInterval(nextSlideHandler, 3000);
+};
+
 let smallbtn0 = document.getElementById("best_btn0");
 let smallbtn1 = document.getElementById("best_btn1");
 let smallbtn2 = document.getElementById("best_btn2");
@@ -86,23 +95,6 @@ const btnRt = document.getElementById("bestRt");
 
 let leftCursor = 0;
 let rightCursor = 4;
-
-// 인터벌의 고유 아이디
-// 초기값: undefined
-let intervalId;
-
-// 이게 인터벌을 초기화하는 로직이야.
-const runAutoSlide = () => {
-  // 인터벌 아이디가 존재하는 경우 인터벌 정지
-  if (intervalId) {
-    clearInterval(intervalId);
-  }
-  // 인터벌 아이디가 값이 없음 => 초기값이 없음 => 아직 실행한 인터벌이 없음 => 정지해야 할 인터벌이 없음
-  else {
-  }
-  // 다시 인터벌을 실행하며 인터벌 아이디를 할당
-  intervalId = setInterval(nextSlideHandler, 3000);
-};
 
 const nextSlideHandler = () => {
   leftCursor += 4;
