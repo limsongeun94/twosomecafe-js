@@ -55,8 +55,9 @@ button {
 /* 대슬라이드 부분 */
 /* 대슬라이드 부분 */
 /* 대슬라이드 부분 */
-.img_container {
+#img_container {
   position: relative;
+  overflow: hidden;
 }
 
 #main_banner {
@@ -103,7 +104,7 @@ button {
 /* 베스트메뉴 소슬라이드 부분 */
 /* 베스트메뉴 소슬라이드 부분 */
 .best_menu {
-  position:relative
+  position: relative;
 }
 
 #best_menu_wrap {
@@ -113,9 +114,9 @@ button {
   overflow: hidden;
 }
 
-.best_item_container{
+.best_item_container {
   float: left;
-  margin:0 15px;
+  margin: 0 15px;
 }
 
 .best_item_img {
@@ -124,23 +125,23 @@ button {
 }
 
 .best_item_text {
-  text-align:center;
-  padding-top:16px;
+  text-align: center;
+  padding-top: 16px;
 }
 
-#bestLt{
-  position:absolute;
+#bestLt {
+  position: absolute;
   width: 50px;
-  top:calc(50% - 25px + 80px);
-  left:calc(251px - 50px);
+  top: calc(50% - 25px + 80px);
+  left: calc(251px - 50px);
   cursor: pointer;
 }
 
-#bestRt{
-  position:absolute;
+#bestRt {
+  position: absolute;
   width: 50px;
-  top:calc(50% - 25px + 80px);
-  right:calc(251px - 50px);
+  top: calc(50% - 25px + 80px);
+  right: calc(251px - 50px);
   cursor: pointer;
 }
 
