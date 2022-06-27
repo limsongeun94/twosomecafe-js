@@ -55,12 +55,22 @@ button {
 /* 대슬라이드 부분 */
 /* 대슬라이드 부분 */
 /* 대슬라이드 부분 */
-#img_container {
+.banner_wrapper {
   position: relative;
   overflow: hidden;
 }
 
-#main_banner {
+#banner_container {
+  width: 500vw;
+  /* transform: translate(-100vw); */
+}
+
+.banner_inner {
+  width: 100vw;
+  float: left;
+}
+
+.banner_inner img {
   width: 100%;
 }
 
@@ -68,7 +78,7 @@ button {
   font-size: 2em;
   position: absolute;
   left: 20px;
-  top: calc(50% - 30px);
+  top: calc(50% - 30px + 50px);
   cursor: pointer;
 }
 
@@ -76,11 +86,11 @@ button {
   font-size: 2em;
   position: absolute;
   right: 20px;
-  top: calc(50% - 30px);
+  top: calc(50% - 30px + 50px);
   cursor: pointer;
 }
 
-.num_btn {
+.num_btn_wrap {
   display: flex;
   width: 120px;
   justify-content: space-between;
