@@ -36,30 +36,44 @@ for (i = 0; i < bannerArr.length; i++) {
 document.getElementsByClassName("banner_wrapper")[0].appendChild(bContainer);
 //----------------------------------------html생성----------------------------------------
 
-// for (i = 0; i < 5; i++) {
-//   bContainer.style.transform = "translate(-100vw)";
-//   // i % 5 * 100
-// }
-
-let bBTN0 = document.getElementById("btn0");
-let bBTN1 = document.getElementById("btn1");
-let bBTN2 = document.getElementById("btn2");
-let bBTN3 = document.getElementById("btn3");
-let bBTN4 = document.getElementById("btn4");
-
-// bBTN0.addEventListener("click", () => {
-//   bContainer.style.transform = "translate(0vw)";
-//   console.log("안녕0번");
-// });
-
-// bBTN1.addEventListener("click", () => {
-//   bContainer.style.transform = "translate(-100vw)";
-//   console.log("안녕1번");
-// });
-
+//----------------------------------------버튼작동----------------------------------------
+//////////동그라미버튼//////////
+// 변수 current 선언
+let current = 0;
+// 동그라미 버튼 배열을 arr로 선언
 const arr = document.getElementsByClassName("num_btn");
 for (let i = 0; i <= 4; i++) {
+  // 동그라미 버튼0-4를 누를 때마다
   arr[i].addEventListener("click", () => {
-    bContainer.style.transform = `translate(-${(i % 5) * 100}vw)`;
+    // (버튼을 누를때마다) current 값을 변경해주고
+    current = i;
+    // bContainer가 current값에 따라 이동하는 함수인 setPosition 실행
+    setPosition();
   });
 }
+//////////동그라미버튼//////////
+
+//////////이전다음버튼//////////
+const l_btn = document.getElementById("btn_left");
+const r_btn = document.getElementById("btn_right");
+l_btn.addEventListener("click", () => {
+  // 이전버튼을 클릭할 때마다 current 값 감소
+  current--;
+  // 나머지(모듈러)는 음수일 때 작동 안 하므로, current가 음수일 때 조건식 작성
+  if (current < 0) current += bannerArr.length;
+  // bContainer가 current값에 따라 이동하는 함수인 setPosition 실행
+  setPosition();
+});
+r_btn.addEventListener("click", () => {
+  // 다음버튼 클릭할 때마다 current 값 감소.
+  current++;
+  // bContainer가 current값에 따라 이동하는 함수인 setPosition 실행
+  setPosition();
+});
+//////////이전다음버튼//////////
+
+// current값을 활용해서 위치를 설정하는 함수를 만들어서 매번 실행해주면 좋을거같아
+function setPosition() {
+  bContainer.style.transform = `translate(-${(current % 5) * 100}vw)`;
+}
+//----------------------------------------버튼작동----------------------------------------
