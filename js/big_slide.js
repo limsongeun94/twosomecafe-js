@@ -49,7 +49,8 @@ for (let i = 0; i <= 4; i++) {
     current = i;
     // bContainer가 current값에 따라 이동하는 함수인 setPosition 실행
     setPosition();
-    fillCircle();
+
+    runAutoSlide;
   });
 }
 //////////동그라미버튼//////////
@@ -64,47 +65,69 @@ l_btn.addEventListener("click", () => {
   if (current < 0) current += bannerArr.length;
   // bContainer가 current값에 따라 이동하는 함수인 setPosition 실행
   setPosition();
-  fillCircle();
+
+  runAutoSlide;
 });
 r_btn.addEventListener("click", () => {
   // 다음버튼 클릭할 때마다 current 값 감소.
   current++;
   // bContainer가 current값에 따라 이동하는 함수인 setPosition 실행
   setPosition();
-  fillCircle();
+
+  runAutoSlide;
 });
 //////////이전다음버튼//////////
 
-function fillCircle() {
-  const expr = bInner.id;
-  switch (expr) {
-    case "banner_inner_0":
+function setPosition() {
+  // current값을 활용해서 위치를 설정
+  bContainer.style.transform = `translate(-${(current % 5) * 100}vw)`;
+
+  // 동그라미 칠하기 전에 동그라미를 다 비워놓고
+  arr[0].innerText = "○";
+  arr[1].innerText = "○";
+  arr[2].innerText = "○";
+  arr[3].innerText = "○";
+  arr[4].innerText = "○";
+
+  // current값을 활용해서 현재 위치에 따라 동그라미 칠하기
+  switch (current % 5) {
+    case 0:
       arr[0].innerText = "●";
       console.log("안녕0");
       break;
-    case "banner_inner_1":
+    case 1:
       arr[1].innerText = "●";
       console.log("안녕1");
       break;
-    case "banner_inner_2":
+    case 2:
       arr[2].innerText = "●";
       console.log("안녕2");
       break;
-    case "banner_inner_3":
+    case 3:
       arr[3].innerText = "●";
       console.log("안녕3");
       break;
-    case "banner_inner_4":
+    case 4:
       arr[4].innerText = "●";
       console.log("안녕4");
       break;
-    default:
-      console.log("디폴트");
   }
 }
 
-// current값을 활용해서 위치를 설정하는 함수를 만들어서 매번 실행해주면 좋을거같아
-function setPosition() {
-  bContainer.style.transform = `translate(-${(current % 5) * 100}vw)`;
-}
+let intervalId;
+const runAutoSlide = () => {
+  if (intervalId) {
+    clearInterval(intervalId);
+  } else {
+  }
+  intervalId = setInterval(() => {
+    current++;
+    setPosition();
+  }, 3000);
+};
+
+setInterval(() => {
+  current++;
+  setPosition();
+}, 3000);
 //----------------------------------------버튼작동----------------------------------------

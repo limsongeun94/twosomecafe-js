@@ -55,8 +55,11 @@ button {
 /* 대슬라이드 부분 */
 /* 대슬라이드 부분 */
 /* 대슬라이드 부분 */
-.banner_wrapper {
+.main_banner {
   position: relative;
+}
+
+.banner_wrapper {
   overflow: hidden;
 }
 
@@ -73,6 +76,7 @@ button {
 
 .banner_inner img {
   width: 100%;
+  min-width: 1890px;
 }
 
 #btn_left {
