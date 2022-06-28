@@ -41,6 +41,8 @@ ul li {
 
 .sub_visual ul {
   padding: 30px 0 100px 0;
+  display: flex;
+  justify-content: center;
 }
 
 .sub_visual ul li a {
