@@ -50,7 +50,7 @@ for (let i = 0; i <= 4; i++) {
     // bContainer가 current값에 따라 이동하는 함수인 setPosition 실행
     setPosition();
 
-    runAutoSlide;
+    doAutoSlide();
   });
 }
 //////////동그라미버튼//////////
@@ -66,7 +66,7 @@ l_btn.addEventListener("click", () => {
   // bContainer가 current값에 따라 이동하는 함수인 setPosition 실행
   setPosition();
 
-  runAutoSlide;
+  doAutoSlide();
 });
 r_btn.addEventListener("click", () => {
   // 다음버튼 클릭할 때마다 current 값 감소.
@@ -74,7 +74,7 @@ r_btn.addEventListener("click", () => {
   // bContainer가 current값에 따라 이동하는 함수인 setPosition 실행
   setPosition();
 
-  runAutoSlide;
+  doAutoSlide();
 });
 //////////이전다음버튼//////////
 
@@ -93,41 +93,36 @@ function setPosition() {
   switch (current % 5) {
     case 0:
       arr[0].innerText = "●";
-      console.log("안녕0");
       break;
     case 1:
       arr[1].innerText = "●";
-      console.log("안녕1");
       break;
     case 2:
       arr[2].innerText = "●";
-      console.log("안녕2");
       break;
     case 3:
       arr[3].innerText = "●";
-      console.log("안녕3");
       break;
     case 4:
       arr[4].innerText = "●";
-      console.log("안녕4");
       break;
   }
 }
 
-let intervalId;
-const runAutoSlide = () => {
-  if (intervalId) {
-    clearInterval(intervalId);
+//----------------------------------------버튼작동----------------------------------------
+
+//----------------------------------------자동재생----------------------------------------
+let bigIntervalId;
+const doAutoSlide = () => {
+  if (bigIntervalId) {
+    clearInterval(bigIntervalId);
   } else {
   }
-  intervalId = setInterval(() => {
+  bigIntervalId = setInterval(() => {
     current++;
     setPosition();
   }, 3000);
 };
 
-setInterval(() => {
-  current++;
-  setPosition();
-}, 3000);
-//----------------------------------------버튼작동----------------------------------------
+doAutoSlide();
+//----------------------------------------자동재생----------------------------------------
