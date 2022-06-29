@@ -63,25 +63,40 @@ button {
 }
 /* 비디오 부분 */
 
+/* 원두 부분 */
+.bean {
+  width: calc(100vw - (100vw - 100%));
+  height: calc(100vh - 100px);
+  background-image: url("../../img/brand/pexels-lukas-942802.jpg");
+  background-position: center 35%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 270px;
+  box-sizing: border-box;
+}
+
+/* 원두 부분 */
+
 /* 연혁 부분 */
 .history {
   width: calc(100vw - (100vw - 100%));
   height: calc(100vh - 100px);
-  position:relative;
+  position: relative;
 }
 
-#year_container{
+#year_container {
   font-size: 48px;
-  position:absolute;
-  top:calc(50% - 24px);
-  left:251px;
+  position: absolute;
+  top: calc(50% - 24px);
+  left: 251px;
 }
 
-#event_container{
+#event_container {
   font-size: 48px;
-  position:absolute;
-  top:calc(50% - 24px);
-  right:251px;
+  position: absolute;
+  top: calc(50% - 24px);
+  right: 251px;
 }
 /* 연혁 부분 */
 
