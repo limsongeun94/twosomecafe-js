@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>투썸플레이스 - A Towsome Place</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../../css/menu/cake_proto.css"
+    />
+    <link
+      rel="icon"
+      href="../../img/fixed/favicon/bi_img_logo.ico"
+      sizes="32x32"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="header_inner">
+        <div class="header_logo">
+          <a href="../../index.html"
+            ><img
+              src="../../img/fixed/navigation/bi_img_text.png"
+              alt="text BI"
+          /></a>
+        </div>
+        <div class="header_actions">
+          <div class="header_actions_top">
+            <a href="../account/service_term_agree_page.html"
+              ><img
+                src="../../img/fixed/navigation/2849831_account_avatar_person_profile_multimedia_icon.png"
+                alt="account"
+                width="24px"
+            /></a>
+            <a
+              ><img
+                src="../../img/fixed/navigation/2849824_store_shopping_market_buy_shop_icon.png"
+                alt="shopping"
+                width="24px"
+            /></a>
+            <a href="../map/map.html"
+              ><img
+                src="../../img/fixed/navigation/2849828_pointer_map_location_place_multimedia_icon.png"
+                alt="map"
+                width="24px"
+            /></a>
+          </div>
+          <nav class="header_actions_bottom">
+            <div class="main_menu">
+              <span class="main_menu_label"
+                ><a href="../brand/brand.html">투썸플레이스 소개</a></span
+              >
+              <div class="sub_menu">
+                <div class="sub_menu_item">
+                  <a href="../brand/brand.html">투썸플레이스</a>
+                </div>
+              </div>
+            </div>
+            <div class="main_menu">
+              <span class="main_menu_label"
+                ><a href="../menu/coffee_beverage.html">메뉴 이야기</a></span
+              >
+              <div class="sub_menu">
+                <div class="sub_menu_item">
+                  <a href="../menu/coffee_beverage.html">커피 & 음료</a>
+                </div>
+                <div class="sub_menu_item">
+                  <a href="../menu/icecream.html">아이스크림</a>
+                </div>
+                <div class="sub_menu_item">
+                  <a href="../menu/cake.html">케이크</a>
+                </div>
+                <div class="sub_menu_item">
+                  <a href="../menu/deli.html">델리</a>
+                </div>
+                <div class="sub_menu_item">
+                  <a href="../menu/bread.html">빵</a>
+                </div>
+                <div class="sub_menu_item">
+                  <a href="../menu/md.html">MD</a>
+                </div>
+              </div>
+            </div>
+            <div class="main_menu">
+              <span class="main_menu_label"
+                ><a href="../app_membership/app.html">앱 & 멤버십</a></span
+              >
+              <div class="sub_menu">
+                <div class="sub_menu_item">
+                  <a href="../app_membership/app.html">앱</a>
+                </div>
+                <div class="sub_menu_item">
+                  <a href="../app_membership/membership.html">멤버십</a>
+                </div>
+              </div>
+            </div>
+            <div class="main_menu">
+              <span class="main_menu_label"
+                ><a href="../franchise/information.html">창업안내</a></span
+              >
+              <div class="sub_menu">
+                <div class="sub_menu_item">
+                  <a href="../franchise/information.html">창업안내</a>
+                </div>
+                <div class="sub_menu_item">
+                  <a href="../franchise/consultation.html">상담신청</a>
+                </div>
+                <div class="sub_menu_item">
+                  <a href="../franchise/faq.html">FAQ</a>
+                </div>
+              </div>
+            </div>
+            <div class="main_menu">
+              <span class="main_menu_label"
+                ><a href="../event/event.html">이벤트</a></span
+              >
+              <div class="sub_menu">
+                <div class="sub_menu_item">
+                  <a href="../event/event.html">이벤트</a>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <div style="height: 120px"></div>
+
+    <section class="sub_visual">
+      <h1>케이크</h1>
+      <p>고급 원재료와 차별화된 레시피의 프리미엄 케이크</p>
+      <ul>
+        <li><a href="coffee_beverage.html">커피 & 음료</a></li>
+        <li><a href="icecream.html">아이스크림</a></li>
+        <li><a href="cake.html">케이크</a></li>
+        <li><a href="deli.html">델리</a></li>
+        <li><a href="bread.html">빵</a></li>
+        <li><a href="md.html">MD</a></li>
+      </ul>
+    </section>
+
+    <section class="menu_search">
+      <div class="search_bar">
+        <p style="font-weight: bold">메뉴 검색</p>
+        <div class="search_box">
+          <input class="search_text" type="text" />
+          <button class="search_button"></button>
+        </div>
+      </div>
+      <div class="item_wrapper">
+        <div class="item">
+          <input id="whole_cake" type="checkbox" />
+          <label for="whole_cake">whole cake</label>
+        </div>
+        <div class="item">
+          <input id="party_pack" type="checkbox" />
+          <label for="party_pack">party pack</label>
+        </div>
+        <div class="item">
+          <input id="short_cake" type="checkbox" />
+          <label for="short_cake">short cake</label>
+        </div>
+        <div class="item">
+          <input id="spoon_cake" type="checkbox" />
+          <label for="spoon_cake">spoon cake</label>
+        </div>
+        <div class="item">
+          <input id="dessert" type="checkbox" />
+          <label for="dessert">dessert</label>
+        </div>
+      </div>
+    </section>
+
+    <section class="menu_list">
+      <div>
+        <a href=""
+          ><img
+            src="../../img/menu/cake/whole_cake/sweetpotato_milk_whipping_cream.jpg"
+        /></a>
+        <p>고구마 밀크 생크림</p>
+      </div>
+      <div>
+        <a href=""
+          ><img src="../../img/menu/cake/whole_cake/my_twosome_heart.jpg"
+        /></a>
+        <p>마이 투썸 하트</p>
+      </div>
+      <div>
+        <a href=""
+          ><img
+            src="../../img/menu/cake/whole_cake/strawberry_chocolate_whipping_cream.jpg"
+        /></a>
+        <p>스트로베리 초콜릿 생크림</p>
+      </div>
+      <div>
+        <a href=""
+          ><img
+            src="../../img/menu/cake/whole_cake/mixed_berry_chocolate_whipping_cream.jpg"
+        /></a>
+        <p>믹스드베리 초콜릿 생크림</p>
+      </div>
+      <div>
+        <a href=""
+          ><img
+            src="../../img/menu/cake/whole_cake/strawberry_whipping_cream_one.jpg"
+        /></a>
+        <p>딸기 생크림 1호</p>
+      </div>
+      <div>
+        <a href=""
+          ><img
+            src="../../img/menu/cake/whole_cake/strawberry_whipping_cream_two.jpg"
+        /></a>
+        <p>딸기 생크림 2호</p>
+      </div>
+      <div>
+        <a href=""
+          ><img
+            src="../../img/menu/cake/whole_cake/strawberry_yogurt_whipping_cream.jpg"
+        /></a>
+        <p>딸기 요거 생크림</p>
+      </div>
+      <div>
+        <a href=""
+          ><img
+            src="../../img/menu/cake/whole_cake/white_forest_whipping_cream.jpg"
+        /></a>
+        <p>화이트 포레스트 생크림</p>
+      </div>
+      <div>
+        <a href=""
+          ><img
+            src="../../img/menu/cake/whole_cake/mascarpone_whipping_cream_mixed_berry.jpg"
+        /></a>
+        <p>마스카포네 생크림 (믹스드베리)</p>
+      </div>
+      <div>
+        <a href=""
+          ><img
+            src="../../img/menu/cake/whole_cake/mascarpone_whipping_cream_grayfruit_orange.jpg"
+        /></a>
+        <p>마스카포네 생크림 (자몽/오렌지)</p>
+      </div>
+      <div>
+        <a href=""
+          ><img
+            src="../../img/menu/cake/whole_cake/custard_cream_dacquoise.jpg"
+        /></a>
+        <p>커스터드크림 다쿠아즈</p>
+      </div>
+      <div>
+        <a href=""
+          ><img src="../../img/menu/cake/whole_cake/rice_berry_mousse.jpg"
+        /></a>
+        <p>우리쌀 베리 무스</p>
+      </div>
+      <div>
+        <a href=""
+          ><img src="../../img/menu/cake/whole_cake/queen's_carrot.jpg"
+        /></a>
+        <p>퀸즈캐롯</p>
+      </div>
+      <div>
+        <a href=""
+          ><img src="../../img/menu/cake/whole_cake/red_velvet.jpg"
+        /></a>
+        <p>레드벨벳</p>
+      </div>
+      <div>
+        <a href=""
+          ><img src="../../img/menu/cake/whole_cake/black_velvet.jpg"
+        /></a>
+        <p>블랙벨벳</p>
+      </div>
+      <div>
+        <a href=""
+          ><img src="../../img/menu/cake/whole_cake/mascarpone_tiramisu.jpg"
+        /></a>
+        <p>마스카포네 티라미수</p>
+      </div>
+      <div>
+        <a href=""
+          ><img src="../../img/menu/cake/whole_cake/new_york_cheese.jpg"
+        /></a>
+        <p>뉴욕치즈</p>
+      </div>
+      <div>
+        <a href=""
+          ><img
+            src="../../img/menu/cake/whole_cake/hazelnut_mascarpone_cheese.jpg"
+        /></a>
+        <p>헤이즐넛 마스카포네치즈</p>
+      </div>
+      <div>
+        <a href=""
+          ><img
+            src="../../img/menu/cake/whole_cake/classic_gateau_au_chocola.jpg"
+        /></a>
+        <p>클래식 가토쇼콜라</p>
+      </div>
+      <div>
+        <a href=""
+          ><img
+            src="../../img/menu/cake/whole_cake/belgian_melting_ganache.jpg"
+        /></a>
+        <p>벨지안 멜팅 가나슈</p>
+      </div>
+      <div>
+        <a href=""
+          ><img
+            src="../../img/menu/cake/whole_cake/triple_chocolate_mousse.jpg"
+        /></a>
+        <p>트리플 초콜릿 무스</p>
+      </div>
+      <div>
+        <a href=""
+          ><img src="../../img/menu/cake/whole_cake/gruyere_cheese_mousse.jpg"
+        /></a>
+        <p>그뤼에르치즈 무스</p>
+      </div>
+      <div>
+        <a href=""
+          ><img
+            src="../../img/menu/cake/whole_cake/more_than_cookie_and_cream_one.jpg"
+        /></a>
+        <p>모어 댄 쿠키 앤 크림 1호</p>
+      </div>
+      <div>
+        <a href=""
+          ><img
+            src="../../img/menu/cake/whole_cake/more_than_cookie_and_cream_two.jpg"
+        /></a>
+        <p>모어 댄 쿠키 앤 크림 2호</p>
+      </div>
+      <div>
+        <a href=""
+          ><img
+            src="../../img/menu/cake/whole_cake/mont_blanc_marron_glace_cake.jpg"
+        /></a>
+        <p>몽블랑 보늬밤 케이크</p>
+      </div>
+      <div>
+        <a href=""
+          ><img src="../../img/menu/cake/whole_cake/dutch_solted_caramel.jpg"
+        /></a>
+        <p>더치 솔티드 카라멜</p>
+      </div>
+      <div>
+        <a href=""
+          ><img
+            src="../../img/menu/cake/whole_cake/triple_berry_cheese_mousse.jpg"
+        /></a>
+        <p>트리플 베리 치즈 무스</p>
+      </div>
+      <div>
+        <a href=""
+          ><img
+            src="../../img/menu/cake/whole_cake/whipping_cream_pecan_tart.png"
+        /></a>
+        <p>생크림 피칸 타르트</p>
+      </div>
+      <div>
+        <a href=""
+          ><img src="../../img/menu/cake/whole_cake/chocolate_fudge_cake.jpg"
+        /></a>
+        <p>초코 퍼지 케이크</p>
+      </div>
+      <div>
+        <a href=""
+          ><img src="../../img/menu/cake/whole_cake/burnt_cheesecake.jpg"
+        /></a>
+        <p>번트 치즈 케이크</p>
+      </div>
+      <div>
+        <a href=""
+          ><img
+            src="../../img/menu/cake/whole_cake/yogurt_whipping_cream_one.jpg"
+        /></a>
+        <p>요거 생크림 1호</p>
+      </div>
+      <div>
+        <a href=""
+          ><img
+            src="../../img/menu/cake/whole_cake/yogurt_whipping_cream_two.jpg"
+        /></a>
+        <p>요거 생크림 2호</p>
+      </div>
+      <div>
+        <a href=""
+          ><img
+            src="../../img/menu/cake/whole_cake/yogurt_whipping_cream_three.jpg"
+        /></a>
+        <p>요거 생크림 3호</p>
+      </div>
+      <div>
+        <a href=""
+          ><img
+            src="../../img/menu/cake/whole_cake/real_whipping_cream_two.jpg"
+        /></a>
+        <p>리얼 생크림 2호</p>
+      </div>
+      <div>
+        <a href=""
+          ><img
+            src="../../img/menu/cake/whole_cake/rose_yogurt_whipping_cream_one.jpg"
+        /></a>
+        <p>장미 요거 생크림 1호</p>
+      </div>
+      <div>
+        <a href=""
+          ><img src="../../img/menu/cake/whole_cake/yogurt_heart.jpg"
+        /></a>
+        <p>요거 하트</p>
+      </div>
+      <div>
+        <a href=""
+          ><img src="../../img/menu/cake/whole_cake/twg_milk_tea_chiffon.jpg"
+        /></a>
+        <p>TGW 밀크티 쉬폰</p>
+      </div>
+      <div>
+        <a href=""
+          ><img src="../../img/menu/cake/whole_cake/chocolate_chiffon.jpg"
+        /></a>
+        <p>초코 쉬폰</p>
+      </div>
+      <div>
+        <a href=""
+          ><img src="../../img/menu/cake/whole_cake/blueberry_chiffon.jpg"
+        /></a>
+        <p>블루베리 쉬폰</p>
+      </div>
+      <div>
+        <a href=""
+          ><img src="../../img/menu/cake/whole_cake/redbarry_forest.png"
+        /></a>
+        <p>레드베리 포레스트</p>
+      </div>
+      <div>
+        <a href=""
+          ><img src="../../img/menu/cake/whole_cake/norwegian_forest.png"
+        /></a>
+        <p>노르웨이 숲</p>
+      </div>
+      <div>
+        <a href=""
+          ><img
+            src="../../img/menu/cake/party_pack/party_pack_sweetpotato_milk_whipping_cream.jpg"
+        /></a>
+        <p>파티팩 고구마 밀크 생크림</p>
+      </div>
+      <div>
+        <a href=""
+          ><img src="../../img/menu/cake/party_pack/party_pack_ice_box.png"
+        /></a>
+        <p>파티팩 아이스박스</p>
+      </div>
+      <div>
+        <a href=""
+          ><img src="../../img/menu/cake/party_pack/party_pack_tiramisu.png"
+        /></a>
+        <p>파티팩 티라미수</p>
+      </div>
+      <div>
+        <a href=""
+          ><img
+            src="../../img/menu/cake/party_pack/party_pack_strawberry_chocolate_whipping_cream.png"
+        /></a>
+        <p>파티팩 스트로베리 초콜릿 생크림</p>
+      </div>
+      <div>
+        <a href=""
+          ><img
+            src="../../img/menu/cake/party_pack/party_pack_strawberry_rare_cheese.png"
+        /></a>
+        <p>파티팩 딸기 레어치즈</p>
+      </div>
+      <div>
+        <a href=""
+          ><img
+            src="../../img/menu/cake/party_pack/party_pack_injeolmi_whipping_cream.jpg"
+        /></a>
+        <p>파티팩 인절미 생크림</p>
+      </div>
+      <div>
+        <a href=""
+          ><img
+            src="../../img/menu/cake/party_pack/party_pack_black_sesame_whipping_cream.jpg"
+        /></a>
+        <p>파티팩 흑임자 생크림</p>
+      </div>
+      <div>
+        <a href=""
+          ><img
+            src="../../img/menu/cake/short_cake/piece_refreshing_green_grape_mousse.jpg"
+        /></a>
+        <p>P.리프레싱 청포도 무스</p>
+      </div>
+      <div>
+        <a href=""
+          ><img
+            src="../../img/menu/cake/short_cake/piece_sunshine_green_tangerine_mousse.jpg"
+        /></a>
+        <p>P.선샤인 청귤 무스</p>
+      </div>
+      <div>
+        <a href=""
+          ><img
+            src="../../img/menu/cake/short_cake/piece_strawberry_yogurt_whipping_cream.jpg"
+        /></a>
+        <p>P.딸기 요거 생크림</p>
+      </div>
+      <div>
+        <a href=""
+          ><img
+            src="../../img/menu/cake/short_cake/piece_strawberry_whipping_cream.jpg"
+        /></a>
+        <p>P.딸기 생크림</p>
+      </div>
+      <div>
+        <a href=""
+          ><img
+            src="../../img/menu/cake/short_cake/piece_more_than_cookie_and_cream.jpg"
+        /></a>
+        <p>P.모어 댄 쿠키 앤 크림</p>
+      </div>
+      <div>
+        <a href=""
+          ><img
+            src="../../img/menu/cake/short_cake/piece_dutch_solted_caramel.jpg"
+        /></a>
+        <p>P.더치 솔티드 카라멜</p>
+      </div>
+      <div>
+        <a href=""
+          ><img src="../../img/menu/cake/short_cake/piece_queen's_carrot.jpg"
+        /></a>
+        <p>P.퀸즈캐롯</p>
+      </div>
+      <div>
+        <a href=""
+          ><img src="../../img/menu/cake/short_cake/piece_red_velvet.jpg"
+        /></a>
+        <p>P.레드벨벳</p>
+      </div>
+      <div>
+        <a href=""
+          ><img
+            src="../../img/menu/cake/short_cake/piece_custard_cream_dacquoise.jpg"
+        /></a>
+        <p>P.커스터드크림 다쿠아즈</p>
+      </div>
+      <div>
+        <a href=""
+          ><img src="../../img/menu/cake/short_cake/piece_black_velvet.jpg"
+        /></a>
+        <p>P.블랙벨벳</p>
+      </div>
+      <div>
+        <a href=""
+          ><img
+            src="../../img/menu/cake/short_cake/piece_rice_berry_mousse.jpg"
+        /></a>
+        <p>P.우리쌀 베리 무스</p>
+      </div>
+      <div>
+        <a href=""
+          ><img
+            src="../../img/menu/cake/short_cake/piece_hazelnut_mascarpone_cheese.jpg"
+        /></a>
+        <p>P.헤이즐넛 마스카포네치즈</p>
+      </div>
+      <div>
+        <a href=""
+          ><img
+            src="../../img/menu/cake/short_cake/piece_classic_gateau_au_chocola.jpg"
+        /></a>
+        <p>P.클래식 가토쇼콜라</p>
+      </div>
+      <div>
+        <a href=""
+          ><img src="../../img/menu/cake/short_cake/piece_belgian_ganache.jpg"
+        /></a>
+        <p>P.벨지안 가나슈</p>
+      </div>
+      <div>
+        <a href=""
+          ><img src="../../img/menu/cake/short_cake/piece_new_york_cheese.jpg"
+        /></a>
+        <p>P.뉴욕치즈</p>
+      </div>
+      <div>
+        <a href=""
+          ><img
+            src="../../img/menu/cake/short_cake/piece_gruyere_cheese_mousse.jpg"
+        /></a>
+        <p>P.그뤼에르 치즈 무스</p>
+      </div>
+      <div>
+        <a href=""
+          ><img
+            src="../../img/menu/cake/short_cake/piece_triple_chocolate_mousse.jpg"
+        /></a>
+        <p>P.트리플 초콜릿 무스</p>
+      </div>
+      <div>
+        <a href=""
+          ><img
+            src="../../img/menu/cake/short_cake/piece_triple_berry_cheese_mousse.jpg"
+        /></a>
+        <p>P.트리플 베리 치즈 무스</p>
+      </div>
+      <div>
+        <a href=""
+          ><img
+            src="../../img/menu/cake/short_cake/piece_mont_blanc_marron_glace_cake.jpg"
+        /></a>
+        <p>P.몽블랑 보늬밤 케이크</p>
+      </div>
+      <div>
+        <a href=""
+          ><img
+            src="../../img/menu/cake/short_cake/piece_whipping_cream_pecan_tart.jpg"
+        /></a>
+        <p>P.생크림 피칸 타르트</p>
+      </div>
+      <div>
+        <a href=""
+          ><img
+            src="../../img/menu/cake/short_cake/piece_strawberry_yogurt.jpg"
+        /></a>
+        <p>P.딸기 요거</p>
+      </div>
+      <div>
+        <a href=""
+          ><img
+            src="../../img/menu/cake/short_cake/piece_whipping_cream_soft_chiffon.jpg"
+        /></a>
+        <p>생크림 소프트 쉬폰</p>
+      </div>
+      <div>
+        <a href=""
+          ><img
+            src="../../img/menu/cake/short_cake/piece_blueberry_chiffon.jpg"
+        /></a>
+        <p>P.블루베리 쉬폰</p>
+      </div>
+      <div>
+        <a href=""
+          ><img
+            src="../../img/menu/cake/short_cake/piece_chocolate_chiffon.jpg"
+        /></a>
+        <p>P.초코 쉬폰</p>
+      </div>
+      <div>
+        <a href=""
+          ><img
+            src="../../img/menu/cake/short_cake/piece_twg_milk_tea_chiffon.jpg"
+        /></a>
+        <p>P.TGW 밀크티 쉬폰</p>
+      </div>
+      <div>
+        <a href=""
+          ><img src="../../img/menu/cake/short_cake/piece_redbarry_forest.jpg"
+        /></a>
+        <p>P.레드베리 포레스트</p>
+      </div>
+      <div>
+        <a href=""
+          ><img src="../../img/menu/cake/short_cake/piece_norwegian_forest.jpg"
+        /></a>
+        <p>P.노르웨이 숲</p>
+      </div>
+      <div>
+        <a href=""
+          ><img
+            src="../../img/menu/cake/spoon_cake/piece_sweetpotato_milk_whipping_cream.jpg"
+        /></a>
+        <p>떠먹는 고구마 밀크 생크림</p>
+      </div>
+      <div>
+        <a href=""
+          ><img src="../../img/menu/cake/spoon_cake/piece_ice_box.jpg"
+        /></a>
+        <p>떠먹는 아이스박스</p>
+      </div>
+      <div>
+        <a href=""
+          ><img src="../../img/menu/cake/spoon_cake/piece_tiramisu.jpg"
+        /></a>
+        <p>떠먹는 티라미수</p>
+      </div>
+      <div>
+        <a href=""
+          ><img
+            src="../../img/menu/cake/spoon_cake/piece_strawberry_chocolate_whipping_cream.jpg"
+        /></a>
+        <p>떠먹는 스트로베리 초콜릿 생크림</p>
+      </div>
+      <div>
+        <a href=""
+          ><img
+            src="../../img/menu/cake/spoon_cake/piece_strawberry_rare_cheese.jpg"
+        /></a>
+        <p>떠먹는 딸기 레어치즈</p>
+      </div>
+      <div>
+        <a href=""
+          ><img
+            src="../../img/menu/cake/spoon_cake/piece_Injeolmi_whipping_cream.jpg"
+        /></a>
+        <p>떠먹는 인절미 생크림</p>
+      </div>
+      <div>
+        <a href=""
+          ><img
+            src="../../img/menu/cake/spoon_cake/piece_black_sesame_whipping_cream.jpg"
+        /></a>
+        <p>떠먹는 흑임자 생크림</p>
+      </div>
+      <div>
+        <a href=""
+          ><img src="../../img/menu/cake/dessert/ice_box_frozen_cake.jpg"
+        /></a>
+        <p>아이스박스 프로즌케이크</p>
+      </div>
+      <div>
+        <a href=""
+          ><img
+            src="../../img/menu/cake/dessert/strawberry_vanilla_frozen_cake.jpg"
+        /></a>
+        <p>딸기 바닐라 프로즌케이크</p>
+      </div>
+      <div>
+        <a href=""
+          ><img src="../../img/menu/cake/dessert/chocolate_croquant_chou.jpg"
+        /></a>
+        <p>초콜릿 크로캉롱슈</p>
+      </div>
+      <div>
+        <a href=""
+          ><img src="../../img/menu/cake/dessert/vanilla_croquant_chou.jpg"
+        /></a>
+        <p>바닐라 크로캉롱슈</p>
+      </div>
+      <div>
+        <a href=""
+          ><img src="../../img/menu/cake/dessert/chocolate_cream_choux.jpg"
+        /></a>
+        <p>초콜릿 크렘슈</p>
+      </div>
+      <div>
+        <a href=""
+          ><img src="../../img/menu/cake/dessert/vanilla_cream_choux.jpg"
+        /></a>
+        <p>바닐라 크렘슈</p>
+      </div>
+      <div>
+        <a href=""
+          ><img src="../../img/menu/cake/dessert/macaron_set_six.jpg"
+        /></a>
+        <p>투썸 마카롱 세트 (6개입)</p>
+      </div>
+      <div>
+        <a href=""
+          ><img src="../../img/menu/cake/dessert/macaron_set_twelve.jpg"
+        /></a>
+        <p>투썸 마카롱 세트 (12개입)</p>
+      </div>
+      <div>
+        <a href=""
+          ><img src="../../img/menu/cake/dessert/mango_tropical_macaron.jpg"
+        /></a>
+        <p>망고 트로피컬 마카롱</p>
+      </div>
+      <div>
+        <a href=""
+          ><img
+            src="../../img/menu/cake/dessert/madagascar_vanilla_macaron.jpg"
+        /></a>
+        <p>마다가스카르 바닐라 마카롱</p>
+      </div>
+      <div>
+        <a href=""
+          ><img src="../../img/menu/cake/dessert/pistachio_.macaron.jpg"
+        /></a>
+        <p>피스타치오 마카롱</p>
+      </div>
+      <div>
+        <a href=""
+          ><img src="../../img/menu/cake/dessert/belgian_chocolate_macaron.jpg"
+        /></a>
+        <p>벨지안 초콜릿 마카롱</p>
+      </div>
+      <div>
+        <a href=""
+          ><img src="../../img/menu/cake/dessert/raspberry_macaron.jpg"
+        /></a>
+        <p>산딸기 마카롱</p>
+      </div>
+      <div>
+        <a href=""
+          ><img src="../../img/menu/cake/dessert/blueberry_macaron.jpg"
+        /></a>
+        <p>블루베리 마카롱</p>
+      </div>
+    </section>
+
+    <button class="more-button">더보기</button>
+
+    <footer>
+      <ul>
+        <li>
+          <a href="../footer/terms_of_service.html">이용약관</a>
+        </li>
+        <li>
+          <a href="../footer/privacy_policy.html">개인정보처리방침</a>
+        </li>
+        <li>
+          <a href="../footer/location_based_service.html"
+            >위치기반서비스 이용약관</a
+          >
+        </li>
+        <li>
+          <a>이메일 무단수집거부</a>
+        </li>
+        <li>
+          <a>법적고지</a>
+        </li>
+      </ul>
+      <hr />
+      <div style="float: left">
+        <p>
+          주소 : 서울특별시 중구 을지로 170, 8층(을지로4가,
+          을지트윈타워)투썸플레이스(주)
+        </p>
+        <p>고객센터 : 1577-4410 | 팩스 : 02-2058-6777</p>
+        <p>
+          대표이사 : 이영상 | 개인정보보호책임자 : 장재호 | 사업자등록번호 :
+          404-86-01054 <br />
+          통신판매업종신고증 : 제 2018-서울중구-0353호 | 대표이메일 :
+          helpmaster@twosome.co.kr
+        </p>
+        <p>Copyright ⓒ 2021 A TWOSOME PLACE Co., LTD. All Rights Reserved.</p>
+      </div>
+      <div style="float: right">
+        <a
+          href="https://www.facebook.com/ATWOSOMEPLACE/"
+          target="_blank"
+          title="facebook"
+          ><img
+            src="../../img/fixed/footer/book_face_facebook_fb_icon.png"
+            width="30px" /></a
+        ><a
+          href="https://www.instagram.com/official_atwosomeplace/?igshid=1vu3rl2z5ps7n"
+          target="_blank"
+          title="instagram"
+          ><img
+            src="../../img/fixed/footer/ig_instagram_photo_icon.png"
+            width="30px" /></a
+        ><a
+          href="https://www.youtube.com/channel/UCDjdk0ufvcvV08hAm_vF06Q"
+          target="_blank"
+          title="youtube"
+          ><img
+            src="../../img/fixed/footer/play_video_youtube_youtuber_icon.png"
+            width="30px"
+        /></a>
+      </div>
+    </footer>
+  </body>
+</html>
