@@ -1,5 +1,8 @@
 let data = null
-const filter = []
+const filter = [
+	// 체크박스 체크 하면 여기 들어갔다가
+	// 체크박스 체크 풀면 여기 다시 뺴는 함수
+]
 
 // function draw(target, data) {
 // 	data.forEach((x) => {
