@@ -124,6 +124,36 @@ button {
 }
 /* 메뉴검색 */
 
+/* 상품리스트 */
+#ice_item_wrap {
+  margin: 0 auto;
+  width: 1400px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.inner {
+  width: 320px;
+  height: 380px;  
+  margin-bottom: 40px;
+  margin-right: 40px;
+}
+
+.inner:nth-child(4n) {
+  margin-right: 0;
+}
+
+.inner > img {
+  width: 320px;
+}
+
+.inner > p {
+  text-align: center;
+  line-height: 50px;
+}
+/* 상품리스트 */
+
 /* 푸터 */
 footer {
   padding: 3% 13.541%;

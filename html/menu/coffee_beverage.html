@@ -21,41 +21,41 @@
     <!-- 네브바 -->
     <header>
       <nav>
-        <img
-          src="../../img/fixed/navigation/bi_img_text.png"
-          width="259px"
-          height="36px"
-        />
-        <div class="show_menu_wrap">
-          <div class="show_menu">브랜드</div>
-          <div class="show_menu">메뉴</div>
-          <div class="show_menu">앱 멤버십</div>
-          <div class="show_menu">창업안내</div>
-          <div class="show_menu">이벤트</div>
-        </div>
-        <div id="hide_menu_wrap">
-          <div class="hide_menu">
-            <div>투썸플레이스</div>
+        <div class="show_menu_container">
+          <img class="logo" src="../../img/fixed/navigation/bi_img_text.png" width="259px" height="36px" />
+          <div class="show_menu_wrap">
+            <div class="show_menu">브랜드</div>
+            <div class="show_menu">메뉴</div>
+            <div class="show_menu">앱 멤버십</div>
+            <div class="show_menu">창업안내</div>
+            <div class="show_menu">이벤트</div>
           </div>
-          <div class="hide_menu">
-            <div>커피 & 음료</div>
-            <div>아이스크림</div>
-            <div>케이크</div>
-            <div>델리</div>
-            <div>빵</div>
-            <div>md</div>
-          </div>
-          <div class="hide_menu">
-            <div>앱</div>
-            <div>멤버십</div>
-          </div>
-          <div class="hide_menu">
-            <div>창업안내</div>
-            <div>상담신청</div>
-            <div>FAQ</div>
-          </div>
-          <div class="hide_menu">
-            <div>이벤트</div>
+          <div class="hide_menu_container">
+            <div id="hide_menu_wrap">
+              <div class="hide_menu">
+                <div>투썸플레이스</div>
+              </div>
+              <div class="hide_menu">
+                <div>커피 & 음료</div>
+                <div>아이스크림</div>
+                <div>케이크</div>
+                <div>델리</div>
+                <div>빵</div>
+                <div>md</div>
+              </div>
+              <div class="hide_menu">
+                <div>앱</div>
+                <div>멤버십</div>
+              </div>
+              <div class="hide_menu">
+                <div>창업안내</div>
+                <div>상담신청</div>
+                <div>FAQ</div>
+              </div>
+              <div class="hide_menu">
+                <div>이벤트</div>
+              </div>
+            </div>
           </div>
         </div>
       </nav>
@@ -96,35 +96,35 @@
       </div>
       <div class="item_wrapper">
         <div class="item">
-          <input id="coffee" type="checkbox" />
+          <input class="bev_box" id="coffee" type="checkbox" onchange="showcoffee()"/>
           <label for="coffee">coffee</label>
         </div>
         <div class="item">
-          <input id="twg_tea" type="checkbox" />
+          <input class="bev_box" id="twg_tea" type="checkbox" />
           <label for="twg_tea">tea</label>
         </div>
         <div class="item">
-          <input id="tea_latte" type="checkbox" />
+          <input class="bev_box" id="tea_latte" type="checkbox" />
           <label for="tea_latte">tea variation</label>
         </div>
         <div class="item">
-          <input id="newtro_taste" type="checkbox" />
+          <input class="bev_box" id="newtro_taste" type="checkbox" />
           <label for="newtro_taste">newtro taste</label>
         </div>
         <div class="item">
-          <input id="blended_fruit" type="checkbox" />
+          <input class="bev_box" id="blended_fruit" type="checkbox" />
           <label for="blended_fruit">blended fruit</label>
         </div>
         <div class="item">
-          <input id="ade_fruit_tea" type="checkbox" />
+          <input class="bev_box" id="ade_fruit_tea" type="checkbox" />
           <label for="ade_fruit_tea">ade & fruit tea</label>
         </div>
         <div class="item">
-          <input id="ice_blend" type="checkbox" />
+          <input class="bev_box" id="ice_blend" type="checkbox" />
           <label for="ice_blend">ice blend</label>
         </div>
         <div class="item">
-          <input id="others" type="checkbox" />
+          <input class="bev_box" id="others" type="checkbox" />
           <label for="others">others</label>
         </div>
       </div>
@@ -132,6 +132,16 @@
     <!-- 메뉴검색 -->
     <!-- 메뉴검색 -->
     <!-- 메뉴검색 -->
+
+    <!-- 메뉴리스트 -->
+    <!-- 메뉴리스트 -->
+    <!-- 메뉴리스트 -->
+    <div id="beverage_items_anchor">
+      <div id="beverage_item_wrap"></div>
+    </div>
+    <!-- 메뉴리스트 -->
+    <!-- 메뉴리스트 -->
+    <!-- 메뉴리스트 -->
 
     <!-- 모달 -->
     <!-- 모달 -->
@@ -230,16 +240,7 @@
       <!-- 푸터 -->
       <!-- 푸터 -->
     </body>
-    <script>
-      function onFocus(evt) {
-        evt.target.parentNode.classList.add("focus");
-      }
-      function onFocusOut(evt) {
-        evt.target.parentNode.classList.remove("focus");
-      }
-    </script>
     <script type="text/javascript" src="../../js/common.js"></script>
-    <script type="text/javascript" src="../../js/consultation.js"></script>
-    <script type="text/javascript" src="../../js/adress.js"></script>
-    <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script type="text/javascript" src="../../js/bev_product.js"></script>
   </html>
