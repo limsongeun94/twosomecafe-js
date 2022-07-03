@@ -1,25 +1,73 @@
 let data = null
-const filter = [
-	// 체크박스 체크 하면 여기 들어갔다가
-	// 체크박스 체크 풀면 여기 다시 뺴는 함수
-]
+let filter = []
+let checkbox = Array.from(document.getElementsByClassName("bev_box"))
+checkbox.forEach((box) => {
+	box.addEventListener('change', () => {
+		if (checkbox[0].checked && filter.includes("coffee") == false) {
+			filter.push("coffee")
+		} else if(checkbox[0].checked == false) {
+			filter = filter.filter(x => x !== "coffee")
+		}
+		if (checkbox[1].checked && filter.includes("tea") == false) {
+			filter.push("tea")
+		} else if(checkbox[1].checked == false) {
+			filter = filter.filter(x => x !== "tea")
+		}
+		if (checkbox[2].checked && filter.includes("tea_variation") == false) {
+			filter.push("tea_variation")
+		} else if(checkbox[2].checked == false) {
+			filter = filter.filter(x => x !== "tea_variation")
+		}
+		if (checkbox[3].checked && filter.includes("newtro_taste") == false) {
+			filter.push("newtro_taste")
+		} else if(checkbox[3].checked == false) {
+			filter = filter.filter(x => x !== "newtro_taste")
+		}
+		if (checkbox[4].checked && filter.includes("blended_fruit") == false) {
+			filter.push("blended_fruit")
+		} else if(checkbox[4].checked == false) {
+			filter = filter.filter(x => x !== "blended_fruit")
+		}
+		if (checkbox[5].checked && filter.includes("ade_fruittea") == false) {
+			filter.push("ade_fruittea")
+		} else if(checkbox[5].checked == false) {
+			filter = filter.filter(x => x !== "ade_fruittea")
+		}
+		if (checkbox[6].checked && filter.includes("ice_blended") == false) {
+			filter.push("ice_blended")
+		} else if(checkbox[6].checked == false) {
+			filter = filter.filter(x => x !== "ice_blended")
+		}		
+		if (checkbox[7].checked && filter.includes("other") == false) {
+			filter.push("other")
+		} else if(checkbox[7].checked == false) {
+			filter = filter.filter(x => x !== "other")
+		}
+		console.log(filter)
+	})	
+})
 
-// function draw(target, data) {
-// 	data.forEach((x) => {
-// 		let inner = document.createElement("div")
-// 		let img = document.createElement("img")
-// 		let text = document.createElement("p")
-		
-// 		inner.className = "inner"
-// 		img.setAttribute("src", x.img)
-// 		text.innerText = x.name
-		
-// 		inner.appendChild(img)
-// 		inner.appendChild(text)
-// 		target.appendChild(inner)
 
-// 	})
-// }
+
+
+
+
+function draw(target, data) {
+	data.forEach((x) => {
+		let inner = document.createElement("div")
+		let img = document.createElement("img")
+		let text = document.createElement("p")
+		
+		inner.className = "inner"
+		img.setAttribute("src", x.img)
+		text.innerText = x.name
+		
+		inner.appendChild(img)
+		inner.appendChild(text)
+		target.appendChild(inner)
+
+	})
+}
 
 // function isAll() {
 
@@ -45,6 +93,9 @@ axios
 		draw(bev_wrap, beverage)
         
 	})
+
+
+
 
 
 
