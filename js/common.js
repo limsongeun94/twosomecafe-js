@@ -2,7 +2,7 @@
 // 네브바
 // 네브바
 const nav = Array.from(document.getElementsByTagName("nav"))[0];
-const hide = document.getElementById("hide_menu_wrap");
+const hide = document.getElementsByClassName("hide_menu_container")[0];
 
 nav.addEventListener("mouseenter", (e) => {
   hide.style.display = "flex";
