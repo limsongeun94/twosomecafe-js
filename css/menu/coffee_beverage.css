@@ -135,9 +135,10 @@ button {
 
 .inner {
   width: 320px;
-  height: 380px;  
+  height: 380px;
   margin-bottom: 40px;
   margin-right: 40px;
+  position: relative;
 }
 
 .inner:nth-child(4n) {
@@ -152,6 +153,39 @@ button {
   text-align: center;
   line-height: 50px;
 }
+
+.layer {
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(100, 89, 89, 0.8);
+  opacity: 0;
+}
+
+.layer_inner {
+  box-sizing: border-box;
+  padding: 30px;
+  position: absolute;
+  left: 5%;
+  top: 5%;
+  width: 90%;
+  height: 90%;
+  background-color: rgba(236, 236, 238, 0.7);
+  opacity: 0;
+}
+
+:is(.layer, .layer_inner):hover {
+  opacity: 1;
+}
+
+.layer_inner > hr {
+  color: #645959;
+  margin: 10px 0;
+}
+
 /* 상품리스트 */
 
 /* 푸터 */
