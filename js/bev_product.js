@@ -125,6 +125,19 @@ function draw(target, data) {
     layer_inner.appendChild(layer_line);
     layer_inner.appendChild(layer_explain);
     print_page.appendChild(inner);
+
+    // layer의 opacity가 0일 때 레이어 생성, layer의 opacity가 1일때 레이어 제거
+    function showLayer() {
+      if (layer.style.opacity == 0) {
+        layer.style.opacity = 1;
+        layer_inner.style.opacity = 1;
+      } else if (layer.style.opacity == 1) {
+        layer.style.opacity = 0;
+        layer_inner.style.opacity = 0;
+      }
+    }
+    // inner를 클릭하면 showExplain함수 실행
+    inner.addEventListener("click", showLayer);
   });
 }
 
