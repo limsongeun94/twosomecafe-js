@@ -2,11 +2,13 @@
 // 미리 null값으로 초기화시켜놓으면 if문으로 값을 체크해보고(72~76줄)오류를 피할수 있도록 코딩할 수 있다.
 let data = null;
 
-// product의 api를 가져와서 그 데이터를 deta로 할당하고
-// checkbox(bev_box)가 체크되면, filter배열에 있는 서브메뉴를 가진 요소를 data(인자)에 포함
-// 이전에 출력되었던 요소들을 삭제하고
-// bev_wrap에 data에 있는 요소들을 출력
+// 체크박스 체크여부로 발생, 삭제될 서브메뉴를 담을 빈 배열 선언
+let filter = [];
 
+// 필터링될 서브메뉴의 체크박스들의 배열 선언
+let checkbox = Array.from(document.getElementsByClassName("bev_box"));
+
+// product의 api를 가져와서 그 받아온 데이터를 할당하고 화면에 그림
 axios.get("http://twosome-api.seoly.me/api/product").then((res) => {
   data = res.data;
 
@@ -21,8 +23,6 @@ axios.get("http://twosome-api.seoly.me/api/product").then((res) => {
 // checkbox(bev_box)가 체크되면, filter배열에 있는 서브메뉴를 가진 요소를 data(인자)에 포함
 // 이전에 출력되었던 요소들을 삭제하고
 // bev_wrap에 data에 있는 요소들을 출력
-let filter = []; // 출력할 서브메뉴를 담을 배열 선언
-let checkbox = Array.from(document.getElementsByClassName("bev_box")); // 필터링될 서브메뉴의 체크박스들의 배열 선언
 checkbox.forEach((box) => {
   box.addEventListener("change", () => {
     // 배열로 이루어진 여러개의 요소(.bev_box = checkbox)에 이벤트리스너 등록
@@ -81,12 +81,66 @@ checkbox.forEach((box) => {
   });
 });
 
+// 1. 사용자가 검색어를 입력하고 버튼을 누른다.
+// 2. 버튼의 이벤트핸들러가 실행된다.
+// 3. 서버에 요청을 보낸다.
+// 4. 서버가 데이터를 보내준다.
+// 5. 서버가 보낸 데이터로 화면을 출력한다.
+
+function search_handler(e) {
+  // keydown할 때마다 함수가 실행되지 않도록, keydown의 엔터키가 아니면 바로 종료시키도록 하는 함수.
+  // 즉, 엔터키를 눌렀을 때 아래 동작들
+  // (인풋창 값을 받아와서 api에 접근해서 필터링된 데이터를 받아와서 화면에 출력하려고 하는)
+  // 을 실행한다.
+  //이벤트 타입이 keydown인 경우에
+  if (e.type == "keydown") {
+    // 이벤트 코드가 엔터가 아닌 경우에, 함수를 종료한다.
+    // return으로 출력을 해보내면 이후엔 실행할 이유가 없으니 함수가 종료되어버림.
+    if (e.code != "Enter") return;
+  }
+
+  // 필터링 되었던 서브메뉴들을 싹 비워서 filter를 다시 빈 배열로 만든다.
+  // !! 이전에 서브메뉴 b에 체크를 했었어도, 서브메뉴 a에 소속된 요소를 검색해도 결과가 나오는 기능 !!
+  filter = [];
+
+  // checkbox를 모두 체크 해제한다.
+  // !! HTML에 보여지는 체크박스를 해제하는 기능. 서브메뉴 a에 소속된 요소가 결과값으로 나오는데 서브메뉴 b가 체크되는 불상사 막는 기능 !!
+  checkbox.forEach((v) => {
+    v.checked = false;
+  });
+
+  // 검색인풋의 값을 search_value로 할당한다.
+  // (함수 내에서 선언된 변수이므로) 후술할 search_btn을 누를 때마다 value값이 할당됨
+  // (함수 내에서 선언된 변수이므로) 버튼을 누를때마다 searhc_value값이 사용자가 입력한 문자열로 초기화됨
+  let search_value = document.getElementsByClassName("search_text")[0].value;
+  axios
+    .get("http://twosome-api.seoly.me/api/product", {
+      params: {
+        search: search_value,
+      },
+    })
+    .then((res) => {
+      data = res.data;
+
+      const beverage = data.filter((x) => x.main_menu == "beverage");
+      const bev_wrap = document.getElementById("beverage_item_wrap");
+
+      // 데이터를 받아 화면에 그리기 위해 draw함수 실행
+      draw(bev_wrap, beverage);
+    });
+}
+
+const search_btn = document.getElementsByClassName("search_button")[0];
+const search_input = document.getElementsByClassName("search_text")[0];
+search_btn.addEventListener("click", search_handler);
+search_input.addEventListener("keydown", search_handler);
+
 // checkbox(bev_box)가 체크되면, filter배열에 있는 서브메뉴를 가진 요소를 data(인자)에 포함
 // 이전에 출력되었던 요소들을 삭제하고
 // bev_wrap에 data에 있는 요소들을 출력
 function draw(target, data) {
-  // isAll() : 체크박스가 체크되어있을 때 아래 서술한 것 실행
-  if (isAll()) {
+  // isFiltering() : filter 배열에 원소가 있으면 후술한 것 실행
+  if (isFiltering()) {
     // filter배열의 요소에 data(인자)배열의 요소의 서브메뉴가 포함된다면
     // 해당 서브메뉴를 가진 data(인자)배열의 요소를 data(인자)배열에 할당한다.
     data = data.filter((product) => filter.includes(product.sub_menu));
@@ -141,15 +195,7 @@ function draw(target, data) {
   });
 }
 
-// checkbox(bev_box)가 체크되었을 떄 true, 체크되지 않았을 때 false를 반환하는 함수
-function isAll() {
-  let checkbox = Array.from(document.getElementsByClassName("bev_box"));
-
-  let result = false;
-  checkbox.forEach((x) => {
-    // checkbox가 체크되어있을 떄 result는 true를 반환, checkbox가 체크가 안 되어있을 땐 result는 false를 반환
-    result = result || x.checked;
-  });
-
-  return result;
+// filter배열에 원소가 있다
+function isFiltering() {
+  return filter.length != 0;
 }
