@@ -96,23 +96,23 @@
       </div>
       <div class="item_wrapper">
         <div class="item">
-          <input id="whole_cake" type="checkbox" />
+          <input class="cake_box" id="whole_cake" type="checkbox" />
           <label for="whole_cake">whole cake</label>
         </div>
         <div class="item">
-          <input id="party_pack" type="checkbox" />
+          <input class="cake_box" id="party_pack" type="checkbox" />
           <label for="party_pack">party pack</label>
         </div>
         <div class="item">
-          <input id="short_cake" type="checkbox" />
+          <input class="cake_box" id="short_cake" type="checkbox" />
           <label for="short_cake">short cake</label>
         </div>
         <div class="item">
-          <input id="spoon_cake" type="checkbox" />
+          <input class="cake_box" id="spoon_cake" type="checkbox" />
           <label for="spoon_cake">spoon cake</label>
         </div>
         <div class="item">
-          <input id="dessert" type="checkbox" />
+          <input class="cake_box" id="dessert" type="checkbox" />
           <label for="dessert">dessert</label>
         </div>
       </div>
@@ -124,7 +124,9 @@
     <!-- 메뉴리스트 -->
     <!-- 메뉴리스트 -->
     <!-- 메뉴리스트 -->
-    <div id="cake_item_wrap"></div>
+    <div id="cake_items_anchor">
+      <div id="cake_item_wrap"></div>
+    </div>
     <!-- 메뉴리스트 -->
     <!-- 메뉴리스트 -->
     <!-- 메뉴리스트 -->
@@ -226,14 +228,6 @@
       <!-- 푸터 -->
       <!-- 푸터 -->
     </body>
-    <script>
-      function onFocus(evt) {
-        evt.target.parentNode.classList.add("focus");
-      }
-      function onFocusOut(evt) {
-        evt.target.parentNode.classList.remove("focus");
-      }
-    </script>
     <script type="text/javascript" src="../../js/common.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script type="text/javascript" src="../../js/cake_product.js"></script>
