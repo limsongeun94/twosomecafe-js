@@ -71,8 +71,8 @@ checkbox.forEach((box) => {
 
     // 체크박스에 반응하여 화면에 그리기 위해 draw 실행
     // if문을 사용한 이유는 미리 null값으로 초기화시켜놓은 data를 if문으로 값을 체크해보고(값이 있는지(true) 없는지(false(null))) 오류를 피할수 있도록 코딩할 수 있다.
-    const bev_wrap = document.getElementById("beverage_item_wrap");
     if (data) {
+      const bev_wrap = document.getElementById("beverage_item_wrap");
       const beverage = data.filter((x) => x.main_menu == "beverage");
       draw(bev_wrap, beverage);
     } else {
@@ -146,9 +146,13 @@ function draw(target, data) {
     data = data.filter((product) => filter.includes(product.sub_menu));
   }
 
+  // 자식 엘리먼트(노드)들을 제거할 방법이 없어서 쓰는 방법.
   // target(인자)를 복제하여 놓고 원본 target(인자)를 삭제
   const print_page = target.cloneNode(); // target(인자)을 복제한 것을 print_page에 할당
-  const parent = target.parentNode; // target(인자)의 부모노드를 parent에 할당
+  // target(인자)의 부모노드를 parent에 할당.
+  // 현재의 부모노드는 #beverage_items_anchor.
+  // 부모노드를 만들어두지 않고 아래와 같은 코드를 치게 되면 부모인 body를 찾아가게 되어 요소들이 맨 밑으로 붙는다.
+  const parent = target.parentNode;
   parent.appendChild(print_page); //parent(target의 부모)에 print_page(target이 복제된 것)에 자식으로 추가
   target.remove(); // target(인자) 제거. (이미 인자는 복제되어 parent의 자식 bev_wrap으로 있으므로.)
 
