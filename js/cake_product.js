@@ -12,11 +12,12 @@ axios.get("http://twosome-api.seoly.me/api/product").then((res) => {
 
 checkbox.forEach((box) => {
   box.addEventListener("change", () => {
-    if (box.checked && filter.includes(box.id) == false) {
+    if (box.checked) {
       filter.push(box.id);
     } else if (box.checked == false) {
       filter = filter.filter((x) => x != box.id);
     }
+
     if (data) {
       let cake_wrap = document.getElementById("cake_item_wrap");
       let cake = data.filter((x) => x.main_menu == "cake");
@@ -24,7 +25,6 @@ checkbox.forEach((box) => {
     } else {
       console.log("오류입니다.");
     }
-    console.log(filter);
   });
 });
 
