@@ -28,6 +28,45 @@ checkbox.forEach((box) => {
   });
 });
 
+// 1. 사용자가 검색어를 입력하고 버튼을 누른다.
+// 2. 버튼의 이벤트핸들러가 실행된다.
+// 3. 서버에 요청을 보낸다.
+// 4. 서버가 데이터를 보내준다.
+// 5. 서버가 보낸 데이터로 화면을 출력한다.
+
+function search_item(event) {
+  console.log(event);
+  if (event.type == "keydown") {
+    if (event.code != "Enter") {
+      return;
+    }
+  }
+
+  filter = [];
+  checkbox.checked = false;
+
+  let search_Value = document.getElementsByClassName("search_text")[0].value;
+
+  axios
+    .get("http://twosome-api.seoly.me/api/product", {
+      params: {
+        search: search_Value,
+      },
+    })
+    .then((res) => {
+      data = res.data;
+
+      let cake_wrap = document.getElementById("cake_item_wrap");
+      let cake = data.filter((x) => x.main_menu == "cake");
+      draw(cake_wrap, cake);
+    });
+}
+
+let input = document.getElementsByClassName("search_text")[0];
+let btn = document.getElementsByClassName("search_button")[0];
+input.addEventListener("keydown", search_item);
+btn.addEventListener("click", search_item);
+
 function draw(target, data) {
   if (filter.length != 0) {
     data = data.filter((product) => filter.includes(product.sub_menu));
