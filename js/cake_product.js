@@ -35,7 +35,6 @@ checkbox.forEach((box) => {
 // 5. 서버가 보낸 데이터로 화면을 출력한다.
 
 function search_item(event) {
-  console.log(event);
   if (event.type == "keydown") {
     if (event.code != "Enter") {
       return;
