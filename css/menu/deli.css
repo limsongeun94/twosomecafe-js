@@ -138,6 +138,8 @@ button {
   height: 380px;
   margin-bottom: 40px;
   margin-right: 40px;
+  position: relative;
+  cursor: pointer;
 }
 
 .inner:nth-child(4n) {
