@@ -59,7 +59,7 @@ function search_item(event) {
   }
 
   filter = [];
-  checkboxList.forEach((box) => box.checked == false);
+  checkboxList.forEach((box) => (box.checked = false));
 
   let search_value = search_input.value;
   axios
