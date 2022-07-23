@@ -61,7 +61,8 @@ function search_product(event) {
   }
 
   filter = [];
-  checkboxList.checked = false;
+  checkboxList.forEach((box) => (box.checked = false));
+
   let search_value = search_input.value;
   axios
     .get("http://twosome-api.seoly.me/api/product", {
