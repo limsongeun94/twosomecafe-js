@@ -1,5 +1,4 @@
 let data = null;
-
 axios
   .get("http://twosome-api.seoly.me/api/product", {
     params: {
@@ -49,6 +48,36 @@ checkboxList.forEach((box) => {
     }
   });
 });
+
+const search_btn = document.getElementsByClassName("search_button")[0];
+const search_input = document.getElementsByClassName("search_text")[0];
+function search_item(event) {
+  if (event.type == "keydown") {
+    if (event.key != "Enter") {
+      return;
+    }
+  }
+
+  filter = [];
+  checkboxList.forEach((box) => box.checked == false);
+
+  let search_value = search_input.value;
+  axios
+    .get("http://twosome-api.seoly.me/api/product", {
+      params: {
+        main_filter: "md",
+        search: search_value,
+      },
+    })
+    .then((res) => {
+      const data = res.data;
+      const md_wrap = document.getElementById("md_item_wrap");
+      draw(md_wrap, data);
+    });
+  console.log(event);
+}
+search_btn.addEventListener("click", search_item);
+search_input.addEventListener("keydown", search_item);
 
 function draw(target, item) {
   let newNode = target.cloneNode();
