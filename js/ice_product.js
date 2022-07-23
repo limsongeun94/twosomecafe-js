@@ -12,6 +12,32 @@ axios
     draw(ice_wrap, data);
   });
 
+let search_btn = document.getElementsByClassName("search_button")[0];
+let search_input = document.getElementsByClassName("search_text")[0];
+function search_item(event) {
+  if (event.type == "keydown") {
+    if (event.key != "Enter") {
+      return;
+    }
+  }
+  let search_value = search_input.value;
+
+  axios
+    .get("http://twosome-api.seoly.me/api/product", {
+      params: {
+        main_filter: "ice_cream",
+        search: search_value,
+      },
+    })
+    .then((res) => {
+      const data = res.data;
+      const ice_wrap = document.getElementById("ice_item_wrap");
+      draw(ice_wrap, data);
+    });
+}
+search_btn.addEventListener("click", search_item);
+search_input.addEventListener("keydown", search_item);
+
 function draw(target, item) {
   let newTarget = target.cloneNode();
   let parentNode = target.parentNode;
