@@ -55,13 +55,13 @@ let search_btn = document.getElementsByClassName("search_button")[0];
 let search_input = document.getElementsByClassName("search_text")[0];
 function search_product(event) {
   if (event.type == "keydown") {
-    if (event.code != "Enter") {
+    if (event.key != "Enter") {
       return;
     }
   }
 
   filter = [];
-  checkbox.checked = false;
+  checkboxList.checked = false;
   let search_value = search_input.value;
   axios
     .get("http://twosome-api.seoly.me/api/product", {

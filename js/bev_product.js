@@ -96,7 +96,7 @@ function search_handler(e) {
   if (e.type == "keydown") {
     // 이벤트 코드가 엔터가 아닌 경우에, 함수를 종료한다.
     // return으로 출력을 해보내면 이후엔 실행할 이유가 없으니 함수가 종료되어버림.
-    if (e.code != "Enter") return;
+    if (e.key != "Enter") return;
   }
 
   // 필터링 되었던 서브메뉴들을 싹 비워서 filter를 다시 빈 배열로 만든다.

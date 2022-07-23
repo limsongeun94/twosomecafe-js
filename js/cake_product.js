@@ -36,7 +36,7 @@ checkbox.forEach((box) => {
 
 function search_item(event) {
   if (event.type == "keydown") {
-    if (event.code != "Enter") {
+    if (event.key != "Enter") {
       return;
     }
   }
