@@ -54,7 +54,6 @@ checkboxList.forEach((submenuCheckbox) => {
 let search_btn = document.getElementsByClassName("search_button")[0];
 let search_input = document.getElementsByClassName("search_text")[0];
 function search_product(event) {
-  // = ==
   if (event.type == "keydown") {
     if (event.code != "Enter") {
       return;
