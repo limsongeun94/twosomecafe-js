@@ -51,6 +51,35 @@ checkboxList.forEach((submenuCheckbox) => {
   });
 });
 
+let search_btn = document.getElementsByClassName("search_button")[0];
+let search_input = document.getElementsByClassName("search_text")[0];
+function search_product(event) {
+  // = ==
+  if (event.type == "keydown") {
+    if (event.code != "Enter") {
+      return;
+    }
+  }
+
+  filter = [];
+  checkbox.checked = false;
+  let search_value = search_input.value;
+  axios
+    .get("http://twosome-api.seoly.me/api/product", {
+      params: {
+        main_filter: "bread",
+        search: search_value,
+      },
+    })
+    .then((res) => {
+      let data = res.data;
+      let bev_wrap = document.getElementById("bread_item_wrap");
+      draw(bev_wrap, data);
+    });
+}
+search_btn.addEventListener("click", search_product);
+search_input.addEventListener("keydown", search_product);
+
 function draw(target, item) {
   let newTarget = target.cloneNode();
   let parentNode = target.parentNode;
