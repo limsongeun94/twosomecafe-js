@@ -1,4 +1,5 @@
 let data = null;
+let filter = [];
 
 axios
   .get("http://twosome-api.seoly.me/api/product", {
@@ -12,13 +13,51 @@ axios
     draw(bev_wrap, data);
   });
 
-function draw(target, item) {
-  item.forEach((x) => {
-    // let copyNode = target.cloneNode();
-    // let parentNode = target.parentNode;
-    // parentNode.appendChild(copyNode);
-    // target.remove();
+let checkboxList = Array.from(
+  document.getElementsByClassName("bread_checkbox")
+);
 
+checkboxList.forEach((submenuCheckbox) => {
+  submenuCheckbox.addEventListener("change", () => {
+    if (submenuCheckbox.checked) {
+      filter.push(submenuCheckbox.id);
+      axios
+        .get("http://twosome-api.seoly.me/api/product", {
+          params: {
+            main_filter: "bread",
+            sub_filter: filter.join(","),
+          },
+        })
+        .then((res) => {
+          let data = res.data;
+          let bev_wrap = document.getElementById("bread_item_wrap");
+          draw(bev_wrap, data);
+        });
+    } else {
+      filter = filter.filter((x) => x != submenuCheckbox.id);
+      axios
+        .get("http://twosome-api.seoly.me/api/product", {
+          params: {
+            main_filter: "bread",
+            sub_filter: filter.join(","),
+          },
+        })
+        .then((res) => {
+          let data = res.data;
+          let bev_wrap = document.getElementById("bread_item_wrap");
+          draw(bev_wrap, data);
+        });
+    }
+  });
+});
+
+function draw(target, item) {
+  let newTarget = target.cloneNode();
+  let parentNode = target.parentNode;
+  parentNode.appendChild(newTarget);
+  target.remove();
+
+  item.forEach((x) => {
     let inner = document.createElement("div");
     let img = document.createElement("img");
     let text = document.createElement("p");
@@ -43,7 +82,7 @@ function draw(target, item) {
     layer_inner.appendChild(layer_name);
     layer_inner.appendChild(layer_line);
     layer_inner.appendChild(layer_explain);
-    target.appendChild(inner);
+    newTarget.appendChild(inner);
 
     inner.addEventListener("click", () => {
       if (layer.style.opacity == 0) {
