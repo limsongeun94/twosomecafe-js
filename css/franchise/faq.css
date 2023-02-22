@@ -75,7 +75,7 @@ details {
 }
 
 details:last-child {
-  border: 1px solid #ececee;
+  border-bottom: 1px solid #ececee;
 }
 
 details[open] > p {
