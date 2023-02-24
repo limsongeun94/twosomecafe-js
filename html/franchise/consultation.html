@@ -14,6 +14,7 @@
       href="../../img/fixed/favicon/bi_img_logo.ico"
       sizes="32x32"
     />
+    <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
   </head>
   <body>
     <!-- 네브바 -->
@@ -218,7 +219,7 @@
               <div style="display: flex; flex-direction: column">
                 <div style="display: flex">
                   <input type="text" id="sample6_postcode" class="zip" placeholder="우편번호" />
-                  <button type="button" onclick="sample6_execDaumPostcode()" class="color_button">우편번호 검색</button>
+                  <button type="button" onclick="sample6_execDaumPostcode()" value="우편번호 찾기" class="color_button">우편번호 검색</button>
                 </div>
                 <div style="margin-top: 10px; display: flex">
                   <input type="text" id="sample6_address" class="adress_main" placeholder="주소" />
@@ -384,5 +385,5 @@
   <script type="text/javascript" src="../../js/common.js"></script>
   <script type="text/javascript" src="../../js/consultation.js"></script>
   <script type="text/javascript" src="../../js/adress.js"></script>
-  <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+  <!-- <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script> -->
 </html>
